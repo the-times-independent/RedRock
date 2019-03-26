@@ -1,0 +1,75 @@
+$body-font-stack: "Rubik", "Helvetica Neue", sans-serif;
+$header-font-stack: "Libre Baskerville", Georgia, serif;
+
+$pure-white:    #FFFFFF;
+$pure-black:    #000000;
+$pure-red:      #FF0000;
+$pure-green:    #00FF00;
+$pure-blue:     #0000FF;
+
+$breaking-red:  #AA0000;
+
+html {
+	height: 100%;
+}
+
+body {
+	background: $pure-white;
+	color: #555;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	font-family: $body-font-stack;
+	font-size: 17px;
+	line-height: 1.5;
+	min-height: 100%;
+	word-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+
+/* Fade in page after js loads */
+.js body {
+	opacity: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header-font-stack;
+	font-weight: 700;
+	margin-bottom: .5em;
+}
+
+h1 {
+	font-size: 2.1rem;
+}
+
+h2 {
+	font-size: 1.6rem;
+}
+
+h3 {
+	font-size: 1.4rem;
+}
+
+h4, h5, h6 {
+	font-size: 1.1rem;
+}
+
+a,
+a:visited {
+	color: #000;
+	text-decoration: none;
+	word-wrap: break-word;
+	-webkit-transition: all 0.2s ease;
+	-moz-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #F35029;
+	text-decoration: underline;
+}

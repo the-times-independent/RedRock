@@ -1,0 +1,87 @@
+.author-meta,
+.entry-author {
+	border-top: 3px solid #000;
+	clear: both;
+	padding: 20px 0;
+}
+
+.entry-author:before,
+.entry-author:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.entry-author:after {
+	clear: both;
+}
+
+.author-box {
+	float: right;
+	position: relative;
+	width: 100%;
+}
+
+.author-avatar {
+	float: right;
+	margin: 0 0 20px 20px;
+}
+
+.author-description {
+	padding-right: 33%;
+}
+
+.author-box h3 {
+	clear: none;
+	font-family: "Rubik", "Helvetica Neue", sans-serif;
+	font-weight: 600;
+	margin: 0;
+}
+
+.author-bio,
+.author-heading {
+	float: left;
+	width: 66%;
+}
+
+/* Large Screen Styles */
+@media screen and (min-width: 881px) {
+
+	.author-meta,
+	.entry-author {
+		padding: 60px 0;
+	}
+
+	.author-information {
+		display: table;
+		min-height: 111px;
+	}
+
+	.author-box {
+		float: right;
+		position: relative;
+		width: calc(66.666%);
+	}
+
+	.author-avatar {
+		margin: 0;
+	}
+
+	.author-avatar .avatar {
+		position: absolute;
+		right: calc(100% + 40px);
+		width: 111px;
+	}
+
+	.author-bio,
+	.author-heading {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.entry-author .author-avatar {
+		display: none; /* Temporary fix */
+	}
+
+}

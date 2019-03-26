@@ -1,0 +1,30 @@
+.page .page {
+	border-top: 3px solid #000;
+	padding: 50px 0;
+}
+
+.page .page .entry-footer .entry-meta {
+	margin-bottom: 20px;
+}
+
+.page .page .entry-title {
+	font-size: 28px;
+	line-height: 1.25;
+	margin-bottom: 10px;
+}
+
+/* Large Screens */
+@media screen and (min-width: 881px) {
+
+	.page .page {
+		padding: 50px 15%;
+	}
+
+	.page .page .entry-title {
+		font-size: 36px;
+	}
+
+	.page .page .entry-footer .entry-meta {
+		margin-bottom: 30px;
+	}
+}

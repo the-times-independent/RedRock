@@ -1,0 +1,70 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	background: #FFF;
+	border: 2px solid #000;
+	border-radius: 0;
+	color: #F35029;
+	font-family: "Rubik", "Helvetica Neue", sans-serif;
+	font-weight: 500;
+	line-height: 1;
+	padding: 15px 20px;
+	-webkit-appearance: none;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	background: #000;
+	color: #FFF;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	background: #000;
+	color: #FFF;
+	outline: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	border: 2px solid #000;
+	border-radius: 0;
+	color: #F35029;
+	padding: 12px 15px;
+	-webkit-appearance: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+	color: #000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"] {
+	padding: 11px 15px;
+}
+
+textarea {
+	padding-left: 3px;
+	width: 100%;
+}

@@ -1,0 +1,23 @@
+.paying-wages {
+    overflow: hidden;
+    text-align: center;
+    background: #EEEEEE;
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
+    padding-bottom: 1.2em;
+    
+    .wages-adlabel {
+        color: #aaaaaa;
+        font-size: .8rem;
+        margin: .4em;
+    }
+    img {
+        width: auto;
+        height: auto;
+        vertical-align: middle;
+        margin: 0;
+    }
+    &.before-content {
+        margin-bottom: 3em;
+    }
+}

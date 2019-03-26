@@ -1,0 +1,149 @@
+@media screen and (max-width: 880px) {
+
+	.main-navigation .col-width {
+		width: 100%;
+	}
+
+	/*
+	 * Sub-menu dropdown buttons
+	 */
+	.dropdown-toggle {
+		border: 1px solid #CCC;
+		display: inline-block;
+		height: 32px;
+		line-height: 5px;
+		margin: 0;
+		padding: 10px;
+		position: absolute;
+		right: 8px;
+		top: 7px;
+		speak: none;
+		z-index: 5;
+		width: 32px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		-khtml-border-radius: 20px;
+		border-radius: 20px;
+	}
+
+	.dropdown-toggle:after {
+		color: #000000;
+		content: '\f107';
+		font-family: 'FontAwesome';
+		font-weight: normal;
+		line-height: 0;
+		text-align: center;
+		vertical-align: baseline;
+	}
+
+	.dropdown-toggle:hover,
+	.dropdown-toggle.toggled-on {
+		border-color: #F35029;
+	}
+
+	.dropdown-toggle:hover::after {
+		color: #F35029;
+	}
+
+	.dropdown-toggle.toggled-on:after {
+		content: '\d7';
+		color: #F35029;
+		line-height: 0;
+		vertical-align: top;
+	}
+
+	.dropdown-toggle:active,
+	.dropdown-toggle:hover,
+	.dropdown-toggle:focus {
+		background: transparent;
+		color: #F35029;
+	}
+
+	/*
+	 * Sub-menu top borders
+	 *
+	 * Using a psuedo class for top borders in
+	 * menu on mobile so that we don't need
+	 * media queries in our color annotations.
+	 */
+	.main-navigation .sub-menu,
+	.main-navigation .children {
+		border-top: none;
+		position: relative;
+	}
+
+	.main-navigation .sub-menu:before,
+	.main-navigation .children:before {
+		content: "";
+		border-top: 1px solid #CCC;
+		height: 1px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	/*
+	 * Sub-menu bottom dropdowns
+	 */
+	.main-navigation .sub-menu,
+	.main-navigation .children {
+		background: #FFF;
+		height: auto;
+		max-height: 0;
+		opacity: 0;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+		-webkit-transition: max-height 0.3s ease, opacity 0.3s ease;
+		-moz-transition: max-height all 0.3s ease, opacity 0.3s ease;
+		transition: max-height all 0.3s ease, opacity 0.3s ease;
+	}
+
+	.main-navigation .sub-menu.toggled-on,
+	.main-navigation .children.toggled-on {
+		max-height: 9999px;
+		opacity: 1;
+		width: 100%;
+	}
+
+	/*
+	 * Sub-menu bottom borders
+	 *
+	 * Using a psuedo class for bottom borders
+	 * in menu on mobile so that we don't need
+	 * media queries in our color annotations.
+	 */
+	.main-navigation li {
+		position: relative;
+	}
+
+	.main-navigation li a {
+		position: relative;
+		z-index: 1;
+	}
+
+	.main-navigation li:after {
+		content: "";
+		bottom: 0;
+		border-bottom: 1px solid #CCC;
+		height: 1px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+
+	.main-navigation li:after {
+		content: "";
+		bottom: 0;
+		border-bottom: 1px solid #CCC;
+		height: 1px;
+		left: 0;
+		position: absolute;
+		width: 100%;
+	}
+
+	.main-navigation ul:last-of-type > li:last-of-type:after {
+		border-bottom: none;
+	}
+}

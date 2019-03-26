@@ -1,0 +1,210 @@
+.comment-navigation .nav-previous,
+.post-navigation .nav-previous {
+	display: inline-block;
+}
+
+.comment-navigation .nav-previous a .meta-nav:before,
+.post-navigation .nav-previous a .meta-nav:before {
+	content: "\00AB\00a0";
+}
+
+.comment-navigation .nav-next,
+.post-navigation .nav-next {
+	display: inline-block;
+}
+
+.comment-navigation .nav-next a .meta-nav:after,
+.post-navigation .nav-next a .meta-nav:after {
+	content: "\00a0\00BB";
+}
+
+.post-navigation .nav-previous:after,
+.post-navigation .nav-next:after,
+.comment-navigation .nav-previous:after,
+.comment-navigation .nav-next:after {
+	color: #CCC;
+	content: "/";
+	padding: 0 10px;
+}
+
+.post-navigation .nav-previous:last-child:after,
+.post-navigation .nav-next:last-child:after,
+.comment-navigation .nav-previous:last-child:after,
+.comment-navigation .nav-next:last-child:after {
+	content: "";
+	display: none;
+}
+
+.post-navigation .meta-nav-title {
+	display: none;
+}
+
+/* Archive navigation */
+.posts-navigation {
+	bottom: 0;
+	clear: both;
+	display: table;
+	margin: 50px 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.posts-navigation .nav-previous {
+	float: left;
+}
+
+.posts-navigation .nav-previous a:before {
+	content: "\00AB\00a0";
+	display: inline;
+	font-family: 'FontAwesome';
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 0;
+	margin: 0 0 0 5px;
+	speak: none;
+	vertical-align: baseline;
+}
+
+.posts-navigation .nav-next a:after {
+	content: "\00a0\00BB";
+	display: inline;
+	font-family: 'FontAwesome';
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 0;
+	margin: 0 0 0 5px;
+	speak: none;
+	vertical-align: baseline;
+}
+
+.posts-navigation .nav-next {
+	float: right;
+}
+
+.posts-navigation a	{
+	border: 2px solid #000;
+	color: #F35029;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1;
+	margin: 0;
+	padding: 12px 40px;
+}
+
+.posts-navigation a:hover,
+.posts-navigation a:active {
+	background: #000;
+	color: #FFF;
+	text-decoration: none;
+}
+
+/* Single navigation */
+.single .site-main .post-navigation {
+	border-top: 3px solid #000;
+	display: block;
+	padding-top: 20px;
+}
+
+.single .entry-header .post-navigation {
+	display: none;
+}
+
+.site-main .comment-navigation,
+.site-main .post-navigation {
+	clear: both;
+	font-family: "Libre Baskerville", Georgia, serif;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 2em;
+	margin: 0 0 20px;
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+}
+
+.site-main .comment-navigation {
+	margin-bottom: 0;
+}
+
+.site-main .comment-navigation .nav-links {
+	border-top: 3px solid #000;
+	padding: 30px 0;
+}
+
+/* Responsive Navigation */
+@media screen and (min-width: 881px) {
+
+	.site-main .post-navigation {
+		text-align: right;
+	}
+
+	.site-main > .post-navigation .nav-previous:after,
+	.site-main > .post-navigation .nav-next:after {
+		content: "";
+		display: none;
+	}
+
+	.single .site-main > .post-navigation {
+		border-top: 1px solid #CCC;
+		margin: 0;
+		padding: 30px 0;
+		text-align: center;
+		width: 100%;
+	}
+
+	.single .site-main > .post-navigation a {
+		display: block;
+	}
+
+	.site-main > .post-navigation .nav-previous {
+		display: inline-block;
+		float: left;
+		padding-right: 20px;
+		text-align: right;
+		width: 50%;
+		vertical-align: middle;
+	}
+
+	.site-main > .post-navigation .nav-next {
+		display: inline-block;
+		float: right;
+		padding-left: 20px;
+		text-align: left;
+		width: 50%;
+		vertical-align: middle;
+	}
+
+	.site-main .post-navigation .meta-nav-title {
+		display: block;
+		font-style: normal;
+		font-family: "Rubik", "Helvetica Neue", sans-serif;
+		font-weight: 400;
+		line-height: 1.5em;
+		margin-bottom: 5px;
+	}
+
+	.single .entry-header .post-navigation {
+		bottom: 0;
+		border-top: none;
+		display: block;
+		margin-bottom: 0;
+		padding-top: 0;
+		position: absolute;
+		width: calc(33.333% - 40px);
+	}
+
+	.site-main .comment-navigation {
+		text-align: center;
+	}
+
+	.site-main .comment-navigation {
+		float: right;
+	}
+
+	.site-main .comment-navigation .nav-links {
+		border-top: 1px solid #CCC;
+	}
+
+}

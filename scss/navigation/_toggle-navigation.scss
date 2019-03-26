@@ -1,0 +1,70 @@
+.menu-toggle {
+	background: #FFF;
+	box-shadow: none;
+	color: #F35029;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 500;
+	line-height: 1;
+	margin: 1em auto;
+	padding: 13px 18px 14px;
+	text-align: left;
+}
+
+.menu-toggle:after {
+	content: '\f107';
+	display: inline-block;
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	margin: 0 0 0 5px;
+	speak: none;
+	vertical-align: baseline;
+}
+
+.menu-toggle[aria-expanded="true"]:after {
+	content: "\d7";
+}
+
+.menu-toggle:focus {
+	background: #FFF;
+	color: #F35029;
+	box-shadow: none;
+}
+
+/* Small menu. */
+.menu-toggle {
+	display: block;
+}
+
+.main-navigation.toggled-on {
+	margin-bottom: 40px;
+}
+
+.main-navigation > div {
+	background: #FFF;
+	height: auto;
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	-webkit-transition: max-height 0.3s ease, opacity 0.3s ease;
+	-moz-transition: max-height all 0.3s ease, opacity 0.3s ease;
+	transition: max-height all 0.3s ease, opacity 0.3s ease;
+}
+
+.main-navigation.toggled-on > div {
+	max-height: 9999px;
+	opacity: 1;
+	width: 100%;
+	z-index: 999;
+}
+
+/* Large Screen Styles */
+@media screen and (min-width: 881px) {
+
+	.menu-toggle {
+		display: none;
+	}
+
+}

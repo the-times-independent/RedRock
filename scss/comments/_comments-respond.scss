@@ -1,0 +1,153 @@
+.single div#respond,
+.comment-respond {
+	border-top: 3px solid #000;
+	clear: both;
+	padding-top: 30px;
+}
+
+.single div#respond:first-child,
+.comment-respond:first-child {
+	border-top: none;
+	padding-top: 0;
+}
+
+.comment-respond p {
+	margin-bottom: .75em;
+}
+
+.comment-respond p label {
+	display: block;
+	font-weight: 600;
+	padding: 12px 0;
+	text-align: left;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.comment-respond p .subscribe-label {
+	font-weight: 400;
+}
+
+#respond p.comment-subscription-form label {
+	font-weight: 400;
+	padding-left: 10px;
+	right: inherit;
+	text-align: left;
+	width: 50%;
+}
+
+.comment-respond p input,
+.comment-respond p textarea {
+	border: 2px solid #000;
+	padding: 12px 15px;
+	width: 100%;
+}
+
+.comment-respond p.form-submit {
+	text-align: right;
+	width: 100%;
+}
+
+.comment-respond p.form-submit input {
+	width: 200px;
+}
+
+/* Inline comment form */
+.single .comment div#respond,
+.comment .comment-respond {
+	border-top: none;
+	margin-bottom: 30px;
+	margin-top: -47px !important;
+	padding-top: 1em;
+	position: relative;
+	width: 100%;
+}
+
+.comment .comment-reply-title {
+	border-top: none;
+	padding-top: 0;
+}
+
+.comment .comment-reply-title small {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.comment .comment-reply-title a {
+	color: red;
+	background: #FFF;
+	font-family: "Rubik", "Helvetica Neue", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	padding: 5px 0;
+}
+
+.comment .comment-reply-title a:before {
+	content: '\00D7';
+	display: inline-block;
+	font-family: 'FontAwesome';
+	font-weight: normal;
+	margin: 0 5px 0 0;
+	speak: none;
+	vertical-align: baseline;
+}
+
+.comment .comment-respond p input,
+.comment .comment-respond p textarea {
+	width: 100%;
+}
+
+/* Responsive Comments */
+@media screen and (min-width: 881px) {
+
+	.single div#respond,
+	.comment-respond {
+		border-top: 1px solid #CCC;
+		padding-top: 60px;
+	}
+
+	.single div#respond:first-child,
+	.comment-respond:first-child {
+		border-top: none;
+		padding-top: 0;
+	}
+
+	.comment-form {
+		position: relative;
+	}
+
+	.comment-respond p {
+		display: table;
+		margin-bottom: 1.5em;
+		overflow: visible;
+		width: 100%;
+	}
+
+	.comment-respond p label {
+		display: table-cell;
+		position: absolute;
+		right: calc(100% + 40px);
+		text-align: right;
+		width: 160px;
+	}
+
+	.comment-respond p input,
+	.comment-respond p textarea {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	/* Inline comment form */
+	.single .comment div#respond,
+	.comment .comment-respond {
+		margin-top: -58px !important;
+		border-top: 1px solid transparent;
+	}
+
+	.comment .comment-respond p.form-submit {
+		padding-left: 50%;
+		width: 100%;
+	}
+
+}

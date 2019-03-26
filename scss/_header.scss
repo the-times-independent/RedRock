@@ -1,0 +1,121 @@
+.top-bar {
+    padding: 1em;
+    background: #dddddd;
+    border-bottom: 1px solid gray;
+    
+    .search-field {
+        padding: 3px 6px;
+    }
+    .search-submit {
+        padding: 7px 9px;
+    }
+}
+
+.site-heading {
+	border-bottom: 6px solid #000;
+	margin: 0;
+	padding: 30px 0;
+}
+
+.site-branding {
+	text-align: center;
+	img {
+	    max-height: 60px;
+        width: auto;
+	}
+}
+
+.site-title {
+	font-family: "Rubik", "Helvetica Neue", sans-serif;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 1;
+	margin: 0;
+}
+
+.site-title a {
+	color: #000;
+	position: relative;
+	text-decoration: none;
+}
+
+.site-title a:hover {
+	color: #F35029;
+}
+
+.site-logo,
+.custom-logo {
+	display: block;
+	margin: 0 auto;
+}
+
+.site-header-image {
+	display: block;
+}
+
+.site-title-heading {
+	margin-bottom: 0;
+}
+
+.site-description {
+	color: #000;
+	font-family: "Libre Baskerville", Georgia, serif;
+	font-weight: 400;
+	font-size: 16px;
+	font-style: italic;
+	line-height: 2em;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin: 0;
+}
+
+/* Hides description from the customizer when empty */
+.site-description:empty {
+	display: none;
+}
+
+/* Large Screen Styles */
+@media screen and (min-width: 881px) {
+	.site-heading {
+		align-items: center;
+		display: block;
+		padding-top: 40px;
+	}
+
+	.site-branding {
+		width: 100%;
+	}
+
+	.site-branding .site-title {
+		display: inline-block;
+	}
+
+	.site-title {
+		font-size: 48px;
+	}
+
+	.has-site-logo .site-title,
+	.wp-custom-logo .site-title {
+		vertical-align: middle;
+	}
+
+	.site-logo,
+	.custom-logo {
+		display: block;
+		margin: 0;
+	}
+
+	.site-logo-link,
+	.custom-logo-link {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.site-title-heading {
+		display: inline-block;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+
+}

@@ -1,0 +1,22 @@
+#post-list {
+	margin: 0;
+	padding-bottom: 120px;
+	width: 100%;
+}
+
+/* Small Styles */
+@media screen and (max-width: 360px) {
+	#post-list[style] {
+		width: 100% !important;
+	}
+}
+
+/* Break point for 2 and 3 column grid */
+@media screen and (min-width: 640px) {
+	#post-list,
+	#post-list[style] {
+		margin: -30px -30px 0;
+		padding-bottom: 120px;
+		width: calc(100% + 60px) !important;
+	}
+}
