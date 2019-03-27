@@ -33,7 +33,7 @@
 }
 
 .bypostauthor .fn:before {
-	color: #F35029;
+	color: $ti-color-accent;
 	content: '\f040';
 	display: inline-block;
 	font-family: 'FontAwesome';
@@ -66,7 +66,7 @@
 }
 
 .comment .comment-author a {
-	color: #F35029;
+	color: $ti-color-accent;
 }
 
 .comment .comment-author .fn {
@@ -95,7 +95,7 @@
 }
 
 .comment .comment-reply-link {
-	color: #F35029;
+	color: $ti-color-accent;
 }
 
 .comment .comment-reply-link:before {

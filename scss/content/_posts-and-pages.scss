@@ -62,7 +62,7 @@
 
 .entry-title a:hover,
 .entry-title a:active {
-	color: #F35029;
+	color: $ti-color-accent;
 }
 
 .entry-meta {
@@ -72,7 +72,7 @@
 }
 
 .entry-meta a {
-	color: #F35029;
+	color: $ti-color-accent;
 	display: inline-block;
 }
 
@@ -130,7 +130,7 @@
 
 .entry-content a,
 .comment-content a {
-	color: #F35029;
+	color: $ti-color-accent;
 	text-decoration: underline;
 }
 
@@ -150,7 +150,7 @@
 
 .entry-content blockquote,
 .comment-content blockquote {
-	border-left: 6px solid #F35029;
+	border-left: 6px solid $ti-color-accent;
 	font-family: "Libre Baskerville", Georgia, serif;
 	font-style: italic;
 	font-size: 18px;
@@ -174,7 +174,7 @@
 
 .entry-content q,
 .comment-content q {
-	border-left: 6px solid #F35029;
+	border-left: 6px solid $ti-color-accent;
 	font-family: "Libre Baskerville", Georgia, serif;
 	font-style: italic;
 	font-size: 18px;

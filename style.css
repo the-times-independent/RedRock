@@ -423,7 +423,7 @@ input[type=submit] {
   background: #FFF;
   border: 2px solid #000;
   border-radius: 0;
-  color: #F35029;
+  color: #CC6633;
   font-family: "Rubik", "Helvetica Neue", sans-serif;
   font-weight: 500;
   line-height: 1;
@@ -460,7 +460,7 @@ input[type=search],
 textarea {
   border: 2px solid #000;
   border-radius: 0;
-  color: #F35029;
+  color: #CC6633;
   padding: 12px 15px;
   -webkit-appearance: none;
 }
@@ -548,7 +548,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-  color: #F35029;
+  color: #CC6633;
   text-decoration: underline;
 }
 
@@ -764,7 +764,7 @@ a:active {
 }
 
 .site-title a:hover {
-  color: #F35029;
+  color: #CC6633;
 }
 
 .site-logo,
@@ -883,7 +883,7 @@ a:active {
 
 .main-navigation .sub-menu li:hover:before,
 .main-navigation .children li:hover:before {
-  color: #F35029;
+  color: #CC6633;
 }
 
 .main-navigation div > ul:first-child {
@@ -908,7 +908,7 @@ a:active {
 
 .main-navigation ul > li:hover > a,
 .main-navigation ul ul > li:hover > a {
-  color: #F35029;
+  color: #CC6633;
 }
 
 .dropdown-toggle {
@@ -1093,7 +1093,7 @@ a:active {
 .menu-toggle {
   background: #FFF;
   box-shadow: none;
-  color: #F35029;
+  color: #CC6633;
   cursor: pointer;
   display: inline-block;
   font-weight: 500;
@@ -1119,7 +1119,7 @@ a:active {
 
 .menu-toggle:focus {
   background: #FFF;
-  color: #F35029;
+  color: #CC6633;
   box-shadow: none;
 }
 
@@ -1197,16 +1197,16 @@ a:active {
 
   .dropdown-toggle:hover,
 .dropdown-toggle.toggled-on {
-    border-color: #F35029;
+    border-color: #CC6633;
   }
 
   .dropdown-toggle:hover::after {
-    color: #F35029;
+    color: #CC6633;
   }
 
   .dropdown-toggle.toggled-on:after {
     content: "×";
-    color: #F35029;
+    color: #CC6633;
     line-height: 0;
     vertical-align: top;
   }
@@ -1215,7 +1215,7 @@ a:active {
 .dropdown-toggle:hover,
 .dropdown-toggle:focus {
     background: transparent;
-    color: #F35029;
+    color: #CC6633;
   }
 
   /*
@@ -1767,7 +1767,7 @@ a:active {
 }
 
 .card .entry-title a:hover {
-  border-bottom-color: #F35029;
+  border-bottom-color: #CC6633;
 }
 
 .card.has-post-thumbnail .entry-header {
@@ -1835,7 +1835,7 @@ a:active {
 
   .card:hover {
     color: #FFF;
-    background-color: #F35029;
+    background-color: #CC6633;
   }
 
   .card:hover a,
@@ -1970,7 +1970,7 @@ a:active {
 
 .entry-title a:hover,
 .entry-title a:active {
-  color: #F35029;
+  color: #CC6633;
 }
 
 .entry-meta {
@@ -1980,7 +1980,7 @@ a:active {
 }
 
 .entry-meta a {
-  color: #F35029;
+  color: #CC6633;
   display: inline-block;
 }
 
@@ -2038,7 +2038,7 @@ a:active {
 
 .entry-content a,
 .comment-content a {
-  color: #F35029;
+  color: #CC6633;
   text-decoration: underline;
 }
 
@@ -2058,7 +2058,7 @@ a:active {
 
 .entry-content blockquote,
 .comment-content blockquote {
-  border-left: 6px solid #F35029;
+  border-left: 6px solid #CC6633;
   font-family: "Libre Baskerville", Georgia, serif;
   font-style: italic;
   font-size: 18px;
@@ -2082,7 +2082,7 @@ a:active {
 
 .entry-content q,
 .comment-content q {
-  border-left: 6px solid #F35029;
+  border-left: 6px solid #CC6633;
   font-family: "Libre Baskerville", Georgia, serif;
   font-style: italic;
   font-size: 18px;
@@ -2353,12 +2353,12 @@ ul.wp-block-gallery li {
   overflow: hidden;
   text-align: center;
   background: #EEEEEE;
-  border-top: solid 1px gray;
-  border-bottom: solid 1px gray;
+  border-top: solid 1px #555555;
+  border-bottom: solid 1px #555555;
   padding-bottom: 1.2em;
 }
 .paying-wages .wages-adlabel {
-  color: #aaaaaa;
+  color: #AAAAAA;
   font-size: 0.8rem;
   margin: 0.4em;
 }
@@ -2458,7 +2458,7 @@ ul.wp-block-gallery li {
 
 .posts-navigation a {
   border: 2px solid #000;
-  color: #F35029;
+  color: #CC6633;
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
@@ -2615,7 +2615,7 @@ ul.wp-block-gallery li {
 }
 
 .bypostauthor .fn:before {
-  color: #F35029;
+  color: #CC6633;
   content: "";
   display: inline-block;
   font-family: "FontAwesome";
@@ -2648,7 +2648,7 @@ ul.wp-block-gallery li {
 }
 
 .comment .comment-author a {
-  color: #F35029;
+  color: #CC6633;
 }
 
 .comment .comment-author .fn {
@@ -2677,7 +2677,7 @@ ul.wp-block-gallery li {
 }
 
 .comment .comment-reply-link {
-  color: #F35029;
+  color: #CC6633;
 }
 
 .comment .comment-reply-link:before {

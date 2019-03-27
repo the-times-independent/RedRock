@@ -42,7 +42,7 @@
 }
 
 .card .entry-title a:hover {
-	border-bottom-color: #F35029;
+	border-bottom-color: $ti-color-accent;
 }
 
 .card.has-post-thumbnail .entry-header {
@@ -114,7 +114,7 @@
 
 	.card:hover {
 		color: #FFF;
-		background-color: #F35029;
+		background-color: $ti-color-accent;
 	}
 
 	.card:hover a,

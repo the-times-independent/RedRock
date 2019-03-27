@@ -1,13 +1,13 @@
 .paying-wages {
     overflow: hidden;
     text-align: center;
-    background: #EEEEEE;
-    border-top: solid 1px gray;
-    border-bottom: solid 1px gray;
+    background: $ad-background;
+    border-top: solid 1px $ad-border-color;
+    border-bottom: solid 1px $ad-border-color;
     padding-bottom: 1.2em;
     
     .wages-adlabel {
-        color: #aaaaaa;
+        color: $ad-label;
         font-size: .8rem;
         margin: .4em;
     }

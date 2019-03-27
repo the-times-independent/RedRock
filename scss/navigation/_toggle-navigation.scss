@@ -1,7 +1,7 @@
 .menu-toggle {
 	background: #FFF;
 	box-shadow: none;
-	color: #F35029;
+	color: $ti-color-accent;
 	cursor: pointer;
 	display: inline-block;
 	font-weight: 500;
@@ -27,7 +27,7 @@
 
 .menu-toggle:focus {
 	background: #FFF;
-	color: #F35029;
+	color: $ti-color-accent;
 	box-shadow: none;
 }
 

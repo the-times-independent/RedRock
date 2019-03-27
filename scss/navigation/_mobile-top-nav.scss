@@ -38,16 +38,16 @@
 
 	.dropdown-toggle:hover,
 	.dropdown-toggle.toggled-on {
-		border-color: #F35029;
+		border-color: $ti-color-accent;
 	}
 
 	.dropdown-toggle:hover::after {
-		color: #F35029;
+		color: $ti-color-accent;
 	}
 
 	.dropdown-toggle.toggled-on:after {
 		content: '\d7';
-		color: #F35029;
+		color: $ti-color-accent;
 		line-height: 0;
 		vertical-align: top;
 	}
@@ -56,7 +56,7 @@
 	.dropdown-toggle:hover,
 	.dropdown-toggle:focus {
 		background: transparent;
-		color: #F35029;
+		color: $ti-color-accent;
 	}
 
 	/*
