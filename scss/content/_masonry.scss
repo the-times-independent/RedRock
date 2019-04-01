@@ -6,144 +6,84 @@
 	width: 100%;
 	word-wrap: break-word;
 	vertical-align: top;
-	-ms-transition: background-color 0.2s ease;
-	-webkit-transition: background-color 0.2s ease;
-	transition: background-color 0.2s ease;
-}
-
-.card .entry-image-section {
-	border-top: 3px solid #000;
-	padding-top: 30px;
-}
-
-.card .entry-image {
-	padding: 0;
-}
-
-.card .entry-header {
-	border-top: 3px solid #000;
-	padding-top: 20px;
-	margin-bottom: 20px;
-	-ms-transition: border-color 0.2s ease;
-	-webkit-transition: border-color 0.2s ease;
-	transition: border-color 0.2s ease;
-}
-
-.card .entry-title {
-	font-size: 24px;
-	line-height: 1.2125em;
-	margin-bottom: 0;
-}
-
-.card .entry-title a {
-	border-bottom: 2px solid transparent;
-	display: inline;
-	text-decoration: none;
-}
-
-.card .entry-title a:hover {
-	border-bottom-color: $ti-color-accent;
-}
-
-.card.has-post-thumbnail .entry-header {
-	border-top: none;
-	padding-top: 0;
-}
-
-.card .entry-content {
-	font-size: 18px;
-	line-height: 1.45em;
-	-ms-transition: color 0.2s ease;
-	-webkit-transition: color 0.2s ease;
-	transition: color 0.2s ease;
-}
-
-.card .entry-meta,
-.card .entry-meta > span:after,
-.card:hover .sd-rating h3.sd-title {
-	-ms-transition: color 0.2s ease;
-	-webkit-transition: color 0.2s ease;
-	transition: color 0.2s ease;
+	
+	a.card-link {
+	    display: block;
+	    color: black;
+	    
+	    &:visited {
+            color: $visited-gray;
+	    }
+	    &:hover {
+	        color: $ti-accent-color;
+	        text-decoration: none;
+	    }
+	}
+	.entry-image-section {
+        border-top: 3px solid black;
+        padding-top: 30px;
+    }
+    .entry-image {
+        padding: 0;
+    }
+    .entry-header {
+        border-top: 3px solid black;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+    .entry-title {
+        font-size: 24px;
+        line-height: 1.2125em;
+        margin-bottom: 0;
+        
+        a {
+            border-bottom: 2px solid transparent;
+            display: inline;
+        }
+    }
+    &.has-post-thumbnail .entry-header {
+        border-top: none;
+        padding-top: 0;
+    }
+    .entry-content {
+        font-size: 18px;
+        line-height: 1.45em;
+    }
 }
 
 /* Breakpoint for small screens */
 @media screen and (max-width: 639px) {
-
 	.card[style] {
 		padding-bottom: 20px;
 		/* Override Masonry width */
 		width: 100% !important;
-	}
-
-	.card[style]:hover {
-		background: inherit !important;
-		color: inherit !important;
-	}
-
-	.card:hover .entry-meta > span:after,
-	.card:hover a,
-	.card:hover a:active,
-	.card:hover a:hover {
-		color: inherit !important;
-	}
-
-	.card .entry-image img {
-		opacity: 1;
-		-webkit-transition: opacity 0.2s ease;
-		-moz-transition: opacity 0.2s ease;
-		transition: opacity 0.2s ease;
-	}
-
-	.card .entry-image:hover img {
-		opacity: 0.5;
-	}
-
+		
+		&:hover {
+            background: inherit !important;
+            color: inherit !important;
+        }
+        .entry-image img {
+            opacity: 1;
+            -webkit-transition: opacity 0.2s ease;
+            -moz-transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease;
+        }
+    }
 }
 
 /* Break point for 2 column grid */
 @media screen and (min-width: 640px) {
-
-	.card,
-	.grid-sizer {
-		width: calc(50%);
+	.card, .grid-sizer {
+		width: 49%;
 	}
 
 	.card {
 		padding: 30px;
-	}
-
-	.card:hover {
-		color: #FFF;
-		background-color: $ti-color-accent;
-	}
-
-	.card:hover a,
-	.card:hover a:active,
-	.card:hover a:hover,
-	.card:hover .entry-meta,
-	.card:hover .entry-meta > span:after,
-	.card:hover .sd-rating h3.sd-title {
-		color: #FFF;
-	}
-
-	.card:hover .entry-header {
-		border-color: #FFF;
-	}
-
-	.card:hover .entry-title a {
-		border-bottom-color: transparent;
-	}
-
-	.card:hover .entry-title a:hover,
-	.card .entry-title a:hover {
-		border-bottom-color: #FFF;
-		text-decoration: none;
-	}
-
-	.card .entry-image-section {
-		border-top: none;
-		padding-top: 0;
-	}
+		.entry-image-section {
+            border-top: none;
+            padding-top: 0;
+        }
+    }
 
 	.card:last-of-type {
 		border-bottom: none;
@@ -152,10 +92,7 @@
 
 /* Break point for 3 column grid */
 @media screen and (min-width: 960px) {
-
-	.card,
-	.grid-sizer {
-		width: calc(33.333%);
+	.card, .grid-sizer {
+		width: 33%;
 	}
-
 }

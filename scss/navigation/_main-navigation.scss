@@ -39,7 +39,7 @@
 
 .main-navigation .sub-menu li:hover:before,
 .main-navigation .children li:hover:before {
-	color: $ti-color-accent;
+	color: $ti-accent-color;
 }
 
 .main-navigation div > ul:first-child {
@@ -53,18 +53,12 @@
 
 .main-navigation ul > li a {
 	display: block;
-	color: #000;
 	padding: 12px 20px;
 	text-decoration: none;
 }
 
 .main-navigation ul > li li a {
 	padding-left: 26px;
-}
-
-.main-navigation ul > li:hover > a,
-.main-navigation ul ul > li:hover > a {
-	color: $ti-color-accent;
 }
 
 .dropdown-toggle {

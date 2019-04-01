@@ -38,20 +38,6 @@
 		padding-top: inherit;
 	}
 
-	/* Javascript turned off */
-	.no-js .main-navigation div > ul {
-		width: 100%;
-	}
-
-	.no-js .main-navigation div > ul li {
-		float: left;
-		width: 33%;
-	}
-
-	.no-js .main-navigation div > ul li li {
-		width: 100%;
-	}
-
 	.main-navigation div > ul:last-child {
 		padding-bottom: inherit;
 		border-bottom: none;

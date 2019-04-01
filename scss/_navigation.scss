@@ -1,3 +1,12 @@
+nav .menu-item a {
+	color: black;
+	
+	&:hover {
+        color: $ti-accent-color;
+        text-decoration: none;
+    }
+}
+
 @import "navigation/main-navigation";
 @import "navigation/social-navigation";
 @import "navigation/colophon-navigation";

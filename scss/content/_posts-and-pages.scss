@@ -60,11 +60,6 @@
 	color: #000;
 }
 
-.entry-title a:hover,
-.entry-title a:active {
-	color: $ti-color-accent;
-}
-
 .entry-meta {
 	color: #999;
 	font-size: .8em;
@@ -72,13 +67,8 @@
 }
 
 .entry-meta a {
-	color: $ti-color-accent;
+	color: $ti-accent-color;
 	display: inline-block;
-}
-
-.entry-meta a:hover,
-.entry-meta a:active {
-	color: #555;
 }
 
 .entry-tags a:before {
@@ -130,15 +120,7 @@
 
 .entry-content a,
 .comment-content a {
-	color: $ti-color-accent;
-	text-decoration: underline;
-}
-
-.entry-content a:hover,
-.entry-content a:active,
-.comment-content a:hover,
-.comment-content a:active {
-	color: #000;
+	color: $ti-accent-color;
 	text-decoration: underline;
 }
 
@@ -150,7 +132,7 @@
 
 .entry-content blockquote,
 .comment-content blockquote {
-	border-left: 6px solid $ti-color-accent;
+	border-left: 6px solid $ti-accent-color;
 	font-family: "Libre Baskerville", Georgia, serif;
 	font-style: italic;
 	font-size: 18px;
@@ -174,7 +156,7 @@
 
 .entry-content q,
 .comment-content q {
-	border-left: 6px solid $ti-color-accent;
+	border-left: 6px solid $ti-accent-color;
 	font-family: "Libre Baskerville", Georgia, serif;
 	font-style: italic;
 	font-size: 18px;
@@ -227,12 +209,6 @@
 	display: inline-block;
 	margin: 0 0 10px;
 	padding: 2px 7px;
-	text-decoration: none;
-}
-
-.page-links a:hover {
-	background: #000;
-	color: #FFF;
 	text-decoration: none;
 }
 

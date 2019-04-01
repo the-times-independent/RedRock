@@ -5,7 +5,7 @@ input[type="submit"] {
 	background: #FFF;
 	border: 2px solid #000;
 	border-radius: 0;
-	color: $ti-color-accent;
+	color: $ti-accent-color;
 	font-family: "Rubik", "Helvetica Neue", sans-serif;
 	font-weight: 500;
 	line-height: 1;
@@ -42,7 +42,7 @@ input[type="search"],
 textarea {
 	border: 2px solid #000;
 	border-radius: 0;
-	color: $ti-color-accent;
+	color: $ti-accent-color;
 	padding: 12px 15px;
 	-webkit-appearance: none;
 }

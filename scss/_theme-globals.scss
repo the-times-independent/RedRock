@@ -46,9 +46,8 @@ h4, h5, h6 {
 	font-size: 1.1rem;
 }
 
-a,
-a:visited {
-	color: #000;
+a {
+	color: $ti-accent-color;
 	text-decoration: none;
 	word-wrap: break-word;
 	-webkit-transition: all 0.2s ease;
@@ -56,9 +55,10 @@ a:visited {
 	transition: all 0.2s ease;
 }
 
-a:hover,
-a:focus,
-a:active {
-	color: $ti-color-accent;
+a:visited {
+	color: $visited-gray;
+}
+
+a:hover, a:focus, a:active {
 	text-decoration: underline;
 }
