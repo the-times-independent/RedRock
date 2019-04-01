@@ -1,9 +1,12 @@
-.DEFAULT_GOAL := clean-then-make-style
+.DEFAULT_GOAL := clean-then-compile
 
-clean-then-make-style: clean-style style
+clean-then-compile: clean style
 
 style:
 	sass ./scss/all.scss ./style.css
 
-clean-style:
+clean:
 	rm ./style.css ./style.css.map
+
+continuous:
+	sass --watch ./scss/all.scss:./style.css
