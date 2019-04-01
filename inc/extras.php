@@ -42,7 +42,14 @@ function redrock_excerpt($excerpt, $raw_excerpt) {
         libxml_use_internal_errors(false);
         
         $domx = new DOMXPath($domd);
-        $items = $domx->query("/html/body/p[1]");
+        
+        if (in_category("letter-to-the-editor")) {
+            $items = $domx->query("/html/body/p[2]");
+        }
+        else {
+            $items = $domx->query("/html/body/p[1]");
+        }
+        
         if (empty($items)) {
             return "";
         }
