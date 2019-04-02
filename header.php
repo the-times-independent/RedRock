@@ -70,11 +70,17 @@
             </div><!-- .col-width -->
         </header><!-- #masthead -->
         
-        <div class="paying-wages before-content">
-            <?php
-                if( function_exists('the_ad_placement') ) { the_ad_placement('before-content'); }
-            ?>
-        </div>
+        <?php
+            if (advads_can_display_ads()):
+        ?>
+                <div class="paying-wages before-content">
+                    <?php
+                        if( function_exists('the_ad_placement') ) { the_ad_placement('before-content'); }
+                    ?>
+                </div>
+        <?php
+            endif;
+        ?>
 
         <div id="content" class="site-content clear">
             <div class="col-width">
