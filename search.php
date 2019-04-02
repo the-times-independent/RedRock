@@ -7,44 +7,32 @@
  * @package RedRock
  */
 
-get_header(); ?>
+get_header();
+?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+    <?php
+        if ( have_posts() ):
+            get_search_form();
+    ?>
+            <div id="post-list">
+                <?php
+                    while ( have_posts() ) :
+                        the_post();
+                        get_template_part( 'template-parts/content', 'card' );
+                    endwhile;
+                    the_posts_navigation();
+                ?>
+            </div>
+    <?php
+        else:
+            get_template_part( 'template-parts/content', 'none' );
+        endif;
+    ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'redrock' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div id="post-list">
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'card' );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-			</div><!-- #post-list -->
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+    </main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_footer(); ?>

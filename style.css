@@ -2464,6 +2464,10 @@ ul.wp-block-gallery li {
     border-top: 1px solid #CCC;
   }
 }
+.search-results main > .search-form:first-child {
+  margin-bottom: 2.5em;
+}
+
 .comments-area {
   border-top: 6px solid #000;
   padding: 20px 0;
