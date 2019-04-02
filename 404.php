@@ -19,8 +19,14 @@ get_header();
             <div class="page-content">
                 <p><?php esc_html_e( "The page you want has moved or does not exist. You might find what you want if you do a search.", 'redrock' ); ?></p>
                 <?php
-                    $fileName = basename(strtok($_SERVER["REQUEST_URI"], "?"));
-                    $searchPrefill = preg_replace('/^article-/', '', $fileName);
+                    if (isset($_GET["id"])) {
+                        $searchPrefill = $_GET["id"];
+                    }
+                    else {
+                        $searchPrefill = basename(strtok($_SERVER["REQUEST_URI"], "?"));
+                    }
+                    $searchPrefill = preg_replace('/^\d+-/', '', $searchPrefill);
+                    $searchPrefill = preg_replace('/^article-/', '', $searchPrefill);
                     $searchPrefill = preg_replace('/[^a-zA-Z0-9]+/', ' ', $searchPrefill);
                     $searchPrefill = trim($searchPrefill);
                     include(locate_template('searchform.php', false, false));
