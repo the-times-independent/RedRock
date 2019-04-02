@@ -72,13 +72,14 @@
         
         <?php
             if (advads_can_display_ads()):
+                $theAd = get_ad_placement('before-content');
+                if (! defined("HIDE-THIS-AD")):
         ?>
-                <div class="paying-wages before-content">
-                    <?php
-                        if( function_exists('the_ad_placement') ) { the_ad_placement('before-content'); }
-                    ?>
-                </div>
+                    <div class="paying-wages before-content">
+                        <?php echo $theAd; ?>
+                    </div>
         <?php
+                endif;
             endif;
         ?>
 
