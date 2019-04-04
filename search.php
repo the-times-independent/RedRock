@@ -12,27 +12,27 @@ get_header();
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-
-    <?php
-        if ( have_posts() ):
+<?php
+        if (have_posts()) {
             get_search_form();
-    ?>
+?>
             <div id="post-list">
-                <?php
-                    while ( have_posts() ) :
+<?php
+                    while (have_posts()) {
                         the_post();
-                        get_template_part( 'template-parts/content', 'card' );
-                    endwhile;
+                        get_template_part('template-parts/content', 'card');
+                    }
                     the_posts_navigation();
-                ?>
+?>
             </div>
-    <?php
-        else:
-            get_template_part( 'template-parts/content', 'none' );
-        endif;
-    ?>
+<?php
+        }
+        else {
+            get_template_part('template-parts/content', 'none');
+        }
+?>
 
-    </main><!-- #main -->
-</div><!-- #primary -->
+    </main>
+</div>
 
 <?php get_footer(); ?>

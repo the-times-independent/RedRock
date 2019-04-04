@@ -12,57 +12,46 @@
  * @package RedRock
  */
 
-get_header(); ?>
+get_header();
+?>
 
-	<div id="primary" class="content-area">
-
-		<?php
-			/*
-			 * Include the Featured Project loop.
-			 * - if featured posts exist, collect their IDs and exclude them from the main loop
-			 */
-			if ( redrock_has_featured_posts( 1 ) ) {
-				$featured_ids = redrock_get_featured_ids();
-				get_template_part( 'template-parts/section', 'featured' );
-			} else {
-				$featured_ids = null;
-			} ?>
-
-		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
-
-			<div id="post-list">
-
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
-						/*
-						 * Include the Card template for the content.
-						 */
-						get_template_part( 'template-parts/content', 'card' );
-					?>
-
-				<?php endwhile; ?>
-
-			</div>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+<div id="primary" class="content-area">
+<?php
+    if (redrock_has_featured_posts(1)) {
+        $featured_ids = redrock_get_featured_ids();
+        get_template_part('template-parts/section', 'featured');
+    }
+    else {
+        $featured_ids = null;
+    }
+?>
+    <main id="main" class="site-main" role="main">
+<?php
+            if (have_posts()) {
+                if (is_home() && !is_front_page()) {
+?>
+                    <header>
+                        <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+                    </header>
+<?php
+                }
+?>
+                <div id="post-list">
+<?php
+                    while (have_posts()) {
+                        the_post();
+                        get_template_part('template-parts/content', 'card');
+                    }
+?>
+                </div>
+<?php
+                the_posts_navigation();
+            }
+            else {
+                get_template_part('template-parts/content', 'none');
+            }
+?>
+    </main>
+</div>
 
 <?php get_footer(); ?>

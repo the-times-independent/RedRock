@@ -11,26 +11,30 @@
 ?>
 
                     <footer id="colophon" class="site-footer" role="contentinfo">
-                        <?php if ( has_nav_menu( 'colophon' ) ) : ?>
+<?php
+                        if (has_nav_menu('colophon')) {
+?>
                             <nav class="colophon-navigation" role="navigation">
-                                <?php wp_nav_menu( array(
+<?php
+                                wp_nav_menu(array(
                                     'theme_location'  => 'colophon',
                                     'depth'           => 1,
                                     'container_class' => 'colophon-menu-wrap',
                                     'menu_class'      => 'colophon-menu',
                                     'link_before'     => '<span>',
                                     'link_after'      => '</span>'
-                                ) ); ?>
-                            </nav><!-- #social-navigation -->
-                        <?php endif; ?>
-                    </footer><!-- #colophon -->
-
-                </div><!-- .col-width -->
-            </div><!-- #content -->
-
-        </div><!-- #page -->
-
-        <?php wp_footer(); ?>
-
+                                ));
+?>
+                            </nav>
+<?php
+                        }
+?>
+                    </footer>
+                </div>
+            </div>
+        </div>
+<?php
+        wp_footer();
+?>
     </body>
 </html>

@@ -1,61 +1,29 @@
 /*!
  * Script for RedRock
  */
-( function( $ ) {
-
-	// Determine if our site is RTL (Right-To-Left)
-	var ltr = true;
-
-	if ( 1 == RedRock.is_rtl ) {
-		ltr = false;
-	}
-
-	// Code inside here fires when the DOM is loaded.
-	$( document ).ready( function() {
-
-		/**
-		 * Set variable
-		 */
-		var $container = $( '#post-list' );
-
-		/**
-		 * Append HTML to masonry wrapper for responsive sizing
-		 * - see: http://masonry.desandro.com/options.html#columnwidth
-		 */
-		$container.append(
-			'<div class="grid-sizer"></div>\
+(function($) {
+	$(document).ready(function() {
+		var $container = $('#post-list');
+		
+		$container.append('\
+			<div class="grid-sizer"></div>\
 			<div class="grid-item"></div>\
-			<div class="grid-item grid-item--width2"></div>'
-		);
-
-		/**
-		 * Move Jetpack sharing and post flair into the entry-footer
-		 */
-		$( '.entry-footer' ).append( $( '#jp-post-flair' ).detach() );
+			<div class="grid-item grid-item--width2"></div>\
+		');
+		$('.entry-footer').append($('#jp-post-flair').detach());
 
 	});
 
-	$( window ).on( 'load', function() {
-
-		/**
-		 * Set variables
-		 */
-		var $wrapper = $( '.js body' ),
-			$container = $( '#post-list' );
-
-		/*
-		 * Fade in page
-		 * - only if js is enabled
-		 */
+	$(window).on('load', function() {
+		var $wrapper = $('.js body'),
+			$container = $('#post-list');
+			
 		$wrapper.animate({
 			opacity: 1,
 		}, 30);
-
-		/**
-		 * Initiate Masonry
-		 */
-		$( function() {
-			$container.imagesLoaded( function() {
+		
+		$(function() {
+			$container.imagesLoaded(function() {
 				$container.masonry({
 					columnWidth: '.grid-sizer',
 					gutter: 0,
@@ -63,13 +31,13 @@
 					itemSelector: '.card',
 					transitionDuration: 0,
 					isFitWidth: false,
-					isOriginLeft: ltr
+					isOriginLeft: true
 				});
 			});
-			// Fade blocks in after images are ready (prevents jumping and re-rendering)
-			$container.find( '.card' ).animate( {
+			
+			$container.find('.card').animate({
 				'opacity' : 1
-			} );
+			});
 		});
 	});
-} )( jQuery );
+})(jQuery);

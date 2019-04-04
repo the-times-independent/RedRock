@@ -8,32 +8,35 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article
+    id="post-<?php the_ID(); ?>"
+    <?php post_class(); ?>
+>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+	</header>
 
 	<div class="entry-content">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'redrock' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+<?php 
+	    the_content();
+	    
+        wp_link_pages(array(
+            'before' => '<div class="page-links">' . esc_html__('Pages:', 'redrock'),
+            'after'  => '</div>',
+        ));
+?>
+	</div>
 
 	<footer class="entry-footer">
-		<?php
-			edit_post_link(
-				sprintf(
-					/* translators: %s: Name of current post */
-					esc_html__( 'Edit %s', 'redrock' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				),
-				'<div class="entry-meta"><span class="edit-link">',
-				'</span></div><!-- .entry-meta -->'
-			);
-		?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+<?php
+        edit_post_link(
+            sprintf(
+                'Edit %s',
+                the_title('<span class="screen-reader-text">"', '"</span>', false)
+            ),
+            '<div class="entry-meta"><span class="edit-link">',
+            '</span></div>'
+        );
+?>
+	</footer>
+</article>

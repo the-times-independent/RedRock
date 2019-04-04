@@ -10,25 +10,22 @@
 
 <section class="no-results not-found">
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing found', 'redrock' ); ?></h1>
+		<h1 class="page-title">Nothing found</h1>
 	</header>
 	<div class="page-content">
-		<?php
-		    if ( is_search() ) :
-		?>
-                <p>
-                    <?php esc_html_e( 'Nothing matched your search. You can try again with different keywords.', 'redrock' ); ?>
-                </p>
-                <?php get_search_form(); ?>
-		<?php
-		    else :
-		?>
-                <p>
-                    <?php esc_html_e( 'The page you want has moved or does not exist. You might find what you want if you do a search.', 'redrock' ); ?>
-                </p>
-                <?php get_search_form(); ?>
-		<?php
-		    endif;
-		?>
+<?php
+        if (is_search()) {
+?>
+            <p>Nothing matched your search. You can try again with different keywords.</p>
+<?php
+            get_search_form();
+        }
+        else {
+?>
+            <p>The page you want has moved or does not exist. You might find what you want if you do a search.</p>
+<?php
+            get_search_form();
+        }
+?>
 	</div>
 </section>
