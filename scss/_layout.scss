@@ -20,17 +20,6 @@
 	width: 90%;
 }
 
-/* No Sidebar */
-.no-sidebar .content-area {
-	margin: 0 auto;
-	max-width: 790px;
-}
-
-.no-sidebar.masonry .content-area {
-	max-width: 100%;
-}
-
-/* Full Width Template */
 .full-width .content-area {
 	margin: 0;
 }
@@ -39,32 +28,7 @@
 	margin: 0;
 }
 
-.clear {
-	clear: both
-}
-
-.clear-fix {
-	clear: both
-}
-
-.clear-fix:before,
-.clear-fix:after {
-	content: " "; /* 1 */
-	display: table; /* 2 */
-}
-
-.clear-fix:after {
-	clear: both;
-}
-
-/* For IE 6/7 only */
-.clear-fix {
-	*zoom: 1;
-}
-
-/* General Responsive Layout */
 @media screen and (max-width: 881px) {
-
 	#page .content-area {
 		float: none;
 	}
@@ -76,14 +40,8 @@
 }
 
 @media screen and (max-width: 510px) {
-
 	.single #page .content-area {
 		border-top: 1px solid #f2f2f2;
 		margin-top: 0;
-	}
-
-	.single #content .module {
-		border-radius: 0;
-		margin-bottom: 0;
 	}
 }

@@ -197,7 +197,7 @@
 	.no-comments {
 		color: #999;
 		clear: both;
-		font-family: "Libre Baskerville", Georgia, serif;
+		font-family: $head-font-family-stack;
 		font-style: italic;
 		margin-bottom: 10px;
 		text-align: center;

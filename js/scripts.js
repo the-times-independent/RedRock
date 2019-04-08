@@ -17,10 +17,7 @@
 	$(window).on('load', function() {
 		var $wrapper = $('.js body'),
 			$container = $('#post-list');
-			
-		$wrapper.animate({
-			opacity: 1,
-		}, 30);
+		
 		
 		$(function() {
 			$container.imagesLoaded(function() {

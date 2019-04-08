@@ -1,4 +1,5 @@
-/* global redrockScreenReaderText */
+var redrockScreenReaderText = {expand:"expand child menu", collapse:"collapse child menu"};
+
 (function($) {
 
 	var body, masthead, menuToggle, siteMenu, siteNavigation;

@@ -7,6 +7,12 @@
 	word-wrap: break-word;
 	vertical-align: top;
 	
+	h1 {
+	    font-size: 1.8em;
+	}
+	h2 {
+	    font-size: 1.5em;
+	}
 	a.card-link {
 	    display: block;
 	    color: black;
@@ -32,30 +38,17 @@
         margin-bottom: 20px;
     }
     .entry-title {
-        font-size: 24px;
-        line-height: 1.2125em;
         margin-bottom: 0;
-        
-        a {
-            border-bottom: 2px solid transparent;
-            display: inline;
-        }
     }
     &.has-post-thumbnail .entry-header {
         border-top: none;
         padding-top: 0;
     }
-    .entry-content {
-        font-size: 18px;
-        line-height: 1.45em;
-    }
 }
 
-/* Breakpoint for small screens */
 @media screen and (max-width: 639px) {
 	.card[style] {
 		padding-bottom: 20px;
-		/* Override Masonry width */
 		width: 100% !important;
 		
 		&:hover {
@@ -71,7 +64,6 @@
     }
 }
 
-/* Break point for 2 column grid */
 @media screen and (min-width: 640px) {
 	.card, .grid-sizer {
 		width: 49%;
@@ -90,7 +82,6 @@
 	}
 }
 
-/* Break point for 3 column grid */
 @media screen and (min-width: 960px) {
 	.card, .grid-sizer {
 		width: 33%;

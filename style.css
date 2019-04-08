@@ -201,7 +201,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=search] {
-  box-sizing: content-box;
   -webkit-appearance: textfield;
 }
 
@@ -245,9 +244,6 @@ input,
 select,
 textarea {
   color: #555;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -262,7 +258,7 @@ h6 {
 }
 
 p {
-  margin: 0 0 1.5em;
+  margin: 0 0 1.5em 0;
 }
 
 dfn,
@@ -284,7 +280,6 @@ pre {
   background: #CCC;
   color: #FFF;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
   font-size: 0.9375rem;
   line-height: 1.6;
   margin-bottom: 1.6em;
@@ -315,7 +310,7 @@ ins {
 }
 
 big {
-  font-size: 125%;
+  font-size: 1.25em;
 }
 
 html {
@@ -325,13 +320,11 @@ html {
 *,
 *:before,
 *:after {
-  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit;
 }
 
 body {
-  background: #fff;
-  /* Fallback for when there is no custom background color defined. */
+  background: #FFFFFF;
 }
 
 blockquote:before,
@@ -341,8 +334,7 @@ q:after {
   content: "";
 }
 
-blockquote,
-q {
+blockquote {
   quotes: "" "";
 }
 
@@ -383,9 +375,7 @@ dd {
 
 img {
   height: auto;
-  /* Make sure images are scaled correctly. */
   max-width: 100%;
-  /* Adhere to container width. */
 }
 
 table {
@@ -409,7 +399,7 @@ input[type=submit] {
   border: 2px solid #000;
   border-radius: 0;
   color: #CC6633;
-  font-family: "Rubik", "Helvetica Neue", sans-serif;
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   font-weight: 500;
   line-height: 1;
   padding: 15px 20px;
@@ -474,16 +464,16 @@ textarea {
 
 html {
   height: 100%;
+  font-size: 20px;
 }
 
 body {
   background: #FFFFFF;
-  color: #555;
+  color: #000000;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Rubik", "Helvetica Neue", sans-serif;
-  font-size: 17px;
+  font-family: warnock-pro, georgia, serif;
   line-height: 1.5;
   min-height: 100%;
   word-wrap: break-word;
@@ -493,31 +483,27 @@ body {
   flex-direction: column;
 }
 
-/* Fade in page after js loads */
-.js body {
-  opacity: 0;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-weight: 700;
+  font-family: chaparral-pro-display, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: 600;
   margin-bottom: 0.5em;
+  line-height: 1.1;
 }
 
 h1 {
-  font-size: 2.1rem;
+  font-size: 2.1em;
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.6em;
 }
 
 h3 {
-  font-size: 1.4rem;
+  font-size: 1.4em;
 }
 
 h4, h5, h6 {
-  font-size: 1.1rem;
+  font-size: 1.1em;
 }
 
 a {
@@ -559,17 +545,6 @@ a:hover, a:focus, a:active {
   width: 90%;
 }
 
-/* No Sidebar */
-.no-sidebar .content-area {
-  margin: 0 auto;
-  max-width: 790px;
-}
-
-.no-sidebar.masonry .content-area {
-  max-width: 100%;
-}
-
-/* Full Width Template */
 .full-width .content-area {
   margin: 0;
 }
@@ -578,32 +553,6 @@ a:hover, a:focus, a:active {
   margin: 0;
 }
 
-.clear {
-  clear: both;
-}
-
-.clear-fix {
-  clear: both;
-}
-
-.clear-fix:before,
-.clear-fix:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-
-.clear-fix:after {
-  clear: both;
-}
-
-/* For IE 6/7 only */
-.clear-fix {
-  *zoom: 1;
-}
-
-/* General Responsive Layout */
 @media screen and (max-width: 881px) {
   #page .content-area {
     float: none;
@@ -619,13 +568,7 @@ a:hover, a:focus, a:active {
     border-top: 1px solid #f2f2f2;
     margin-top: 0;
   }
-
-  .single #content .module {
-    border-radius: 0;
-    margin-bottom: 0;
-  }
 }
-/* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
@@ -652,10 +595,8 @@ a:hover, a:focus, a:active {
   top: 5px;
   width: auto;
   z-index: 100000;
-  /* Above WP toolbar. */
 }
 
-/* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0;
 }
@@ -708,16 +649,18 @@ a:hover, a:focus, a:active {
   clear: both;
 }
 
+header {
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
+}
+
 .top-bar {
+  font-size: 0.8em;
   padding: 1em;
   background: #dddddd;
   border-bottom: 1px solid gray;
 }
-.top-bar .search-field {
-  padding: 3px 6px;
-}
-.top-bar .search-submit {
-  padding: 7px 9px;
+.top-bar .search-form {
+  margin: 0;
 }
 
 .site-heading {
@@ -734,24 +677,6 @@ a:hover, a:focus, a:active {
   width: auto;
 }
 
-.site-title {
-  font-family: "Rubik", "Helvetica Neue", sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 1;
-  margin: 0;
-}
-
-.site-title a {
-  color: #000;
-  position: relative;
-  text-decoration: none;
-}
-
-.site-title a:hover {
-  color: #CC6633;
-}
-
 .site-logo,
 .custom-logo {
   display: block;
@@ -762,29 +687,22 @@ a:hover, a:focus, a:active {
   display: block;
 }
 
-.site-title-heading {
-  margin-bottom: 0;
-}
-
 .site-description {
   color: #000;
-  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: chaparral-pro-display, "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.2em;
   font-style: italic;
-  line-height: 2em;
   position: relative;
   text-align: center;
   width: 100%;
-  margin: 0;
+  margin: 0.4em 0 0 0;
 }
 
-/* Hides description from the customizer when empty */
 .site-description:empty {
   display: none;
 }
 
-/* Large Screen Styles */
 @media screen and (min-width: 881px) {
   .site-heading {
     align-items: center;
@@ -800,15 +718,6 @@ a:hover, a:focus, a:active {
     display: inline-block;
   }
 
-  .site-title {
-    font-size: 48px;
-  }
-
-  .has-site-logo .site-title,
-.wp-custom-logo .site-title {
-    vertical-align: middle;
-  }
-
   .site-logo,
 .custom-logo {
     display: block;
@@ -820,12 +729,9 @@ a:hover, a:focus, a:active {
     display: inline-block;
     vertical-align: middle;
   }
-
-  .site-title-heading {
-    display: inline-block;
-    margin-bottom: 0;
-    vertical-align: middle;
-  }
+}
+nav {
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
 }
 nav .menu-item a {
   color: black;
@@ -1077,6 +983,11 @@ nav .menu-item a:hover {
   margin: 1em;
 }
 
+@media screen and (min-width: 881px) {
+  .menu-toggle {
+    display: none !important;
+  }
+}
 .menu-toggle {
   background: #FFF;
   box-shadow: none;
@@ -1110,7 +1021,6 @@ nav .menu-item a:hover {
   box-shadow: none;
 }
 
-/* Small menu. */
 .menu-toggle {
   display: block;
 }
@@ -1139,12 +1049,6 @@ nav .menu-item a:hover {
   z-index: 999;
 }
 
-/* Large Screen Styles */
-@media screen and (min-width: 881px) {
-  .menu-toggle {
-    display: none;
-  }
-}
 @media screen and (max-width: 880px) {
   .main-navigation .col-width {
     width: 100%;
@@ -1293,12 +1197,10 @@ nav .menu-item a:hover {
     border-bottom: none;
   }
 }
-/* Large Screen Styles */
 @media screen and (min-width: 881px) {
   .main-navigation {
     clear: right;
     float: right;
-    font-size: 16px;
     height: inherit;
     margin: 30px 0;
     overflow: visible;
@@ -1439,7 +1341,7 @@ nav .menu-item a:hover {
 .blog .not-found,
 .search-no-results .page-content {
   border-top: 3px solid #000;
-  padding: 20px 0;
+  padding: 1em 0;
 }
 
 .error404 .page-title {
@@ -1461,27 +1363,27 @@ nav .menu-item a:hover {
 }
 .archive .page-header,
 .search .page-header {
-  border-top: 3px solid #000;
-  padding: 60px 0;
-  text-align: center;
+  margin-bottom: 3em;
+  color: #000000;
 }
-
-.archive .page-header .page-title,
-.search .page-header .page-title {
-  border: 2px solid #000;
-  display: inline-block;
-  font-family: "Rubik", "Helvetica Neue", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 0;
-  padding: 4px 8px;
+.archive .page-header *,
+.search .page-header * {
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
+}
+.archive .page-header .page-title::after,
+.search .page-header .page-title::after {
+  content: "";
+  width: calc(100% + 3em);
+  border-bottom: gray solid 1px;
+  display: block;
+  margin-top: 0.3em;
 }
 
 .archive .taxonomy-description,
 .search .taxonomy-description {
   color: #999;
   font-size: 14px;
-  padding: 20px 30px 0;
+  padding: 1em 1.5em 0;
 }
 
 .archive .page-header p,
@@ -1489,7 +1391,6 @@ nav .menu-item a:hover {
   margin-bottom: 0;
 }
 
-/* Large Screens */
 @media screen and (min-width: 881px) {
   .archive .page-header,
 .search .page-header {
@@ -1552,7 +1453,7 @@ nav .menu-item a:hover {
 
 .author-box h3 {
   clear: none;
-  font-family: "Rubik", "Helvetica Neue", sans-serif;
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   font-weight: 600;
   margin: 0;
 }
@@ -1678,13 +1579,11 @@ nav .menu-item a:hover {
   width: 100%;
 }
 
-/* Small Styles */
 @media screen and (max-width: 360px) {
   #post-list[style] {
     width: 100% !important;
   }
 }
-/* Break point for 2 and 3 column grid */
 @media screen and (min-width: 640px) {
   #post-list,
 #post-list[style] {
@@ -1701,6 +1600,12 @@ nav .menu-item a:hover {
   width: 100%;
   word-wrap: break-word;
   vertical-align: top;
+}
+.card h1 {
+  font-size: 1.8em;
+}
+.card h2 {
+  font-size: 1.5em;
 }
 .card a.card-link {
   display: block;
@@ -1726,28 +1631,16 @@ nav .menu-item a:hover {
   margin-bottom: 20px;
 }
 .card .entry-title {
-  font-size: 24px;
-  line-height: 1.2125em;
   margin-bottom: 0;
-}
-.card .entry-title a {
-  border-bottom: 2px solid transparent;
-  display: inline;
 }
 .card.has-post-thumbnail .entry-header {
   border-top: none;
   padding-top: 0;
 }
-.card .entry-content {
-  font-size: 18px;
-  line-height: 1.45em;
-}
 
-/* Breakpoint for small screens */
 @media screen and (max-width: 639px) {
   .card[style] {
     padding-bottom: 20px;
-    /* Override Masonry width */
     width: 100% !important;
   }
   .card[style]:hover {
@@ -1761,7 +1654,6 @@ nav .menu-item a:hover {
     transition: opacity 0.2s ease;
   }
 }
-/* Break point for 2 column grid */
 @media screen and (min-width: 640px) {
   .card, .grid-sizer {
     width: 49%;
@@ -1779,7 +1671,6 @@ nav .menu-item a:hover {
     border-bottom: none;
   }
 }
-/* Break point for 3 column grid */
 @media screen and (min-width: 960px) {
   .card, .grid-sizer {
     width: 33%;
@@ -1827,8 +1718,7 @@ nav .menu-item a:hover {
   display: none;
 }
 
-.single .byline,
-.group-blog .byline {
+.byline {
   display: inline;
 }
 
@@ -1867,19 +1757,14 @@ nav .menu-item a:hover {
   margin-bottom: 1.2em;
 }
 
-.entry-title {
-  font-size: 2em;
-  line-height: 1.125em;
-}
-
 .entry-title a {
   color: #000;
 }
 
 .entry-meta {
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   color: #999;
   font-size: 0.8em;
-  line-height: 2em;
 }
 
 .entry-meta a {
@@ -1920,7 +1805,7 @@ nav .menu-item a:hover {
 
 .entry-content h5,
 .comment-content h5 {
-  font-family: "Rubik", "Helvetica Neue", sans-serif;
+  font-family: warnock-pro-display, georgia, serif;
   font-weight: 600;
   letter-spacing: 0;
   text-transform: none;
@@ -1928,7 +1813,7 @@ nav .menu-item a:hover {
 
 .entry-content h6,
 .comment-content h6 {
-  font-family: "Rubik", "Helvetica Neue", sans-serif;
+  font-family: warnock-pro-display, georgia, serif;
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
@@ -1942,14 +1827,14 @@ nav .menu-item a:hover {
 
 .entry-content address,
 .comment-content address {
-  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   font-style: normal;
 }
 
 .entry-content blockquote,
 .comment-content blockquote {
   border-left: 6px solid #CC6633;
-  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   font-style: italic;
   font-size: 18px;
   line-height: 1.825;
@@ -1973,7 +1858,7 @@ nav .menu-item a:hover {
 .entry-content q,
 .comment-content q {
   border-left: 6px solid #CC6633;
-  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   font-style: italic;
   font-size: 18px;
   line-height: 1.825em;
@@ -1983,7 +1868,7 @@ nav .menu-item a:hover {
 
 .entry-content cite,
 .comment-content cite {
-  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   font-style: italic;
 }
 
@@ -1999,7 +1884,7 @@ nav .menu-item a:hover {
 
 .entry-content thead th,
 .comment-content thead th {
-  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
@@ -2105,68 +1990,22 @@ nav .menu-item a:hover {
   padding: 0;
 }
 
-/* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
   max-width: 100%;
 }
 
-.wp-caption {
-  margin: 0 0 1.5em;
-  max-width: 100%;
-  position: relative;
+.wp-block-image figcaption {
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
+  text-align: left;
+  font-size: 0.8em;
+}
+.wp-block-image figcaption em:nth-last-child(2),
+.wp-block-image figcaption em:nth-last-child(1) {
+  float: right;
 }
 
-.wp-caption.alignleft {
-  margin-right: 1.5em;
-}
-
-.wp-caption.alignright {
-  margin-left: 1.5em;
-}
-
-.wp-caption img[class*=wp-image-] {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.wp-caption .wp-caption-text {
-  color: #999;
-  font-size: 14px;
-  line-height: 1.525em;
-  margin: 5px 0;
-  position: relative;
-  text-align: center;
-}
-
-.post .wp-caption.aligncenter {
-  margin: 0 auto 1.5em;
-}
-
-/* Large Screen Styles */
-@media screen and (min-width: 881px) {
-  /* Only posts with non-floating/fullwidth images can have hanging captions */
-  .post .wp-caption.aligncenter .wp-caption-text,
-.post .wp-caption.alignnone .wp-caption-text {
-    margin: 0;
-    position: absolute;
-    text-align: right;
-    top: 0;
-    right: calc(100% + 40px);
-    width: 50%;
-  }
-
-  .post .wp-caption.aligncenter .wp-caption-text {
-    margin: 5px 0;
-    position: relative;
-    text-align: center;
-    top: 0;
-    right: inherit;
-    width: 100%;
-  }
-}
 ul.wp-block-gallery {
   margin-bottom: 1em;
 }
@@ -2234,6 +2073,7 @@ ul.wp-block-gallery li {
 }
 
 .paying-wages {
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   overflow: hidden;
   text-align: center;
   background: #EEEEEE;
@@ -2370,7 +2210,7 @@ ul.wp-block-gallery li {
 .site-main .comment-navigation,
 .site-main .post-navigation {
   clear: both;
-  font-family: "Libre Baskerville", Georgia, serif;
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   font-size: 16px;
   font-style: italic;
   line-height: 2em;
@@ -2434,7 +2274,7 @@ ul.wp-block-gallery li {
   .site-main .post-navigation .meta-nav-title {
     display: block;
     font-style: normal;
-    font-family: "Rubik", "Helvetica Neue", sans-serif;
+    font-family: chaparral-pro-display, "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-weight: 400;
     line-height: 1.5em;
     margin-bottom: 5px;
@@ -2462,6 +2302,19 @@ ul.wp-block-gallery li {
     border-top: 1px solid #CCC;
   }
 }
+.search-form {
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
+  height: 2.3em;
+}
+.search-form .search-field {
+  height: 100%;
+  padding: 0 0.5em;
+}
+.search-form .search-submit {
+  height: 100%;
+  padding: 0 0.8em;
+}
+
 .search-results main > .search-form:first-child {
   margin-bottom: 2.5em;
 }
@@ -2664,7 +2517,7 @@ ul.wp-block-gallery li {
   .no-comments {
     color: #999;
     clear: both;
-    font-family: "Libre Baskerville", Georgia, serif;
+    font-family: chaparral-pro-display, "Palatino Linotype", "Book Antiqua", Palatino, serif;
     font-style: italic;
     margin-bottom: 10px;
     text-align: center;
@@ -2757,7 +2610,7 @@ ul.wp-block-gallery li {
 .comment .comment-reply-title a {
   color: red;
   background: #FFF;
-  font-family: "Rubik", "Helvetica Neue", sans-serif;
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 400;
   padding: 5px 0;
@@ -2832,15 +2685,7 @@ ul.wp-block-gallery li {
 .site-footer {
   border-top: 6px solid #000;
   clear: left;
-}
-
-.site-footer .site-info {
-  font-family: "Libre Baskerville", Georgia, serif;
-  font-size: 16px;
-  line-height: 1.66em;
-  font-style: italic;
-  padding: 30px 0;
-  width: 100%;
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
 }
 
 /* Large Screen Styles */

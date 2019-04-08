@@ -1,15 +1,7 @@
 .site-footer {
 	border-top: 6px solid #000;
 	clear: left;
-}
-
-.site-footer .site-info {
-	font-family: "Libre Baskerville", Georgia, serif;
-	font-size: 16px;
-	line-height: 1.66em;
-	font-style: italic;
-	padding: 30px 0;
-	width: 100%;
+	font-family: $meta-font-family-stack;
 }
 
 /* Large Screen Styles */

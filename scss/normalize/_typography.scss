@@ -4,9 +4,6 @@ input,
 select,
 textarea {
 	color: #555;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1rem;
 	line-height: 1.5;
 }
 
@@ -21,7 +18,7 @@ h6 {
 }
 
 p {
-	margin: 0 0 1.5em;
+	margin: 0 0 1.5em 0;
 }
 
 dfn,
@@ -43,7 +40,6 @@ pre {
 	background: #CCC;
 	color: #FFF;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
 	margin-bottom: 1.6em;
@@ -74,5 +70,5 @@ ins {
 }
 
 big {
-	font-size: 125%;
+	font-size: 1.25em;
 }

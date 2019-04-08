@@ -1,9 +1,13 @@
-nav .menu-item a {
-	color: black;
-	
-	&:hover {
-        color: $ti-accent-color;
-        text-decoration: none;
+nav {
+    font-family: $meta-font-family-stack;
+    
+    .menu-item a {
+        color: black;
+    
+        &:hover {
+            color: $ti-accent-color;
+            text-decoration: none;
+        }
     }
 }
 

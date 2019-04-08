@@ -114,7 +114,7 @@
 .site-main .comment-navigation,
 .site-main .post-navigation {
 	clear: both;
-	font-family: "Libre Baskerville", Georgia, serif;
+	font-family: $meta-font-family-stack;
 	font-size: 16px;
 	font-style: italic;
 	line-height: 2em;
@@ -179,7 +179,7 @@
 	.site-main .post-navigation .meta-nav-title {
 		display: block;
 		font-style: normal;
-		font-family: "Rubik", "Helvetica Neue", sans-serif;
+		font-family: $head-font-family-stack;
 		font-weight: 400;
 		line-height: 1.5em;
 		margin-bottom: 5px;

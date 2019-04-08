@@ -50,19 +50,14 @@
 	margin-bottom: 1.2em;
 }
 
-.entry-title {
-	font-size: 2em;
-	line-height: 1.125em;
-}
-
 .entry-title a {
 	color: #000;
 }
 
 .entry-meta {
+    font-family: $meta-font-family-stack;
 	color: #999;
 	font-size: .8em;
-	line-height: 2em;
 }
 
 .entry-meta a {
@@ -103,7 +98,7 @@
 
 .entry-content h5,
 .comment-content h5 {
-	font-family: "Rubik", "Helvetica Neue", sans-serif;
+	font-family: $sect-font-family-stack;
 	font-weight: 600;
 	letter-spacing: 0;
 	text-transform: none;
@@ -111,7 +106,7 @@
 
 .entry-content h6,
 .comment-content h6 {
-	font-family: "Rubik", "Helvetica Neue", sans-serif;
+	font-family: $sect-font-family-stack;
 	font-weight: 400;
 	letter-spacing: 0;
 	text-transform: none;
@@ -125,14 +120,14 @@
 
 .entry-content address,
 .comment-content address {
-	font-family: "Libre Baskerville", Georgia, serif;
+	font-family: $meta-font-family-stack;
 	font-style: normal;
 }
 
 .entry-content blockquote,
 .comment-content blockquote {
 	border-left: 6px solid $ti-accent-color;
-	font-family: "Libre Baskerville", Georgia, serif;
+	font-family: $meta-font-family-stack;
 	font-style: italic;
 	font-size: 18px;
 	line-height: 1.825;
@@ -156,7 +151,7 @@
 .entry-content q,
 .comment-content q {
 	border-left: 6px solid $ti-accent-color;
-	font-family: "Libre Baskerville", Georgia, serif;
+	font-family: $meta-font-family-stack;
 	font-style: italic;
 	font-size: 18px;
 	line-height: 1.825em;
@@ -166,7 +161,7 @@
 
 .entry-content cite,
 .comment-content cite {
-	font-family: "Libre Baskerville", Georgia, serif;
+	font-family: $meta-font-family-stack;
 	font-style: italic;
 }
 
@@ -182,7 +177,7 @@
 
 .entry-content thead th,
 .comment-content thead th {
-	font-family: "Libre Baskerville", Georgia, serif;
+	font-family: $meta-font-family-stack;
 	font-weight: 400;
 	font-size: 14px;
 }

@@ -1,3 +1,9 @@
+@media screen and (min-width: 881px) {
+	.menu-toggle {
+		display: none !important;
+	}
+}
+
 .menu-toggle {
 	background: #FFF;
 	box-shadow: none;
@@ -31,7 +37,6 @@
 	box-shadow: none;
 }
 
-/* Small menu. */
 .menu-toggle {
 	display: block;
 }
@@ -58,13 +63,4 @@
 	opacity: 1;
 	width: 100%;
 	z-index: 999;
-}
-
-/* Large Screen Styles */
-@media screen and (min-width: 881px) {
-
-	.menu-toggle {
-		display: none;
-	}
-
 }

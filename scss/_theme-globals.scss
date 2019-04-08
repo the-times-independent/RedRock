@@ -1,15 +1,15 @@
 html {
 	height: 100%;
+	font-size: 20px;
 }
 
 body {
 	background: $pure-white;
-	color: #555;
+	color: $pure-black;
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	font-family: $body-font-stack;
-	font-size: 17px;
+	font-family: $body-font-family-stack;
 	line-height: 1.5;
 	min-height: 100%;
 	word-wrap: break-word;
@@ -19,31 +19,27 @@ body {
 	flex-direction: column;
 }
 
-/* Fade in page after js loads */
-.js body {
-	opacity: 0;
-}
-
 h1, h2, h3, h4, h5, h6 {
-	font-family: $header-font-stack;
-	font-weight: 700;
+	font-family: $head-font-family-stack;
+	font-weight: 600;
 	margin-bottom: .5em;
+	line-height: 1.1;
 }
 
 h1 {
-	font-size: 2.1rem;
+	font-size: 2.1em;
 }
 
 h2 {
-	font-size: 1.6rem;
+	font-size: 1.6em;
 }
 
 h3 {
-	font-size: 1.4rem;
+	font-size: 1.4em;
 }
 
 h4, h5, h6 {
-	font-size: 1.1rem;
+	font-size: 1.1em;
 }
 
 a {

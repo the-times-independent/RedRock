@@ -6,7 +6,7 @@ input[type="submit"] {
 	border: 2px solid #000;
 	border-radius: 0;
 	color: $ti-accent-color;
-	font-family: "Rubik", "Helvetica Neue", sans-serif;
+	font-family: $meta-font-family-stack;
 	font-weight: 500;
 	line-height: 1;
 	padding: 15px 20px;

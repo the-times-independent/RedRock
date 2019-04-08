@@ -45,20 +45,10 @@ function redrock_content_width() {
 add_action('after_setup_theme', 'redrock_content_width', 0);
 
 function redrock_fonts_url() {
-	$font_families[] = 'Libre Baskerville:700,900,400italic';
-	$font_families[] = 'Rubik:400,500,700,900,400italic,700italic';
-
-    $query_args = array(
-        'family' => urlencode(implode('|', $font_families)),
-        'subset' => urlencode('latin,latin-ext'),
-   );
-
-    $fonts_url = add_query_arg($query_args, 'https://fonts.googleapis.com/css');
-
-	return esc_url_raw($fonts_url);
+	return "https://use.typekit.net/fdd8eid.css";
 }
 
-function redrock_scripts() {
+function redrock_styles() {
 	wp_enqueue_style('redrock-fonts', redrock_fonts_url(), array(), null);
 	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/font-awesome/font-awesome.css', array(), '20151022');
 	
@@ -68,7 +58,9 @@ function redrock_scripts() {
 	else {
 	    wp_enqueue_style('redrock-style', get_stylesheet_uri());
 	}
-	
+}
+
+function redrock_scripts() {
 	wp_enqueue_script('redrock-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151112', true);
 	wp_enqueue_script('redrock-theme-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery', 'masonry'), '20151130', true);
 	wp_enqueue_script('redrock-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151112', true);
@@ -76,13 +68,14 @@ function redrock_scripts() {
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
 		wp_enqueue_script('comment-reply');
 	}
-
-	wp_localize_script('redrock-navigation', 'redrockScreenReaderText', array(
-		'expand'   => esc_html__('expand child menu', 'redrock'),
-		'collapse' => esc_html__('collapse child menu', 'redrock'),
-    ));
 }
-add_action('wp_enqueue_scripts', 'redrock_scripts');
+
+function redrock_styles_and_scripts() {
+    redrock_styles();
+    redrock_scripts();
+}
+
+add_action('wp_enqueue_scripts', 'redrock_styles_and_scripts');
 
 function redrock_html_js_class () {
 	echo "<script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>" . "\n";

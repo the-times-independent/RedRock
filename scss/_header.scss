@@ -1,13 +1,15 @@
+header {
+    font-family: $meta-font-family-stack;
+}
+
 .top-bar {
+    font-size: .8em;
     padding: 1em;
     background: #dddddd;
     border-bottom: 1px solid gray;
     
-    .search-field {
-        padding: 3px 6px;
-    }
-    .search-submit {
-        padding: 7px 9px;
+    .search-form {
+        margin: 0;
     }
 }
 
@@ -25,24 +27,6 @@
 	}
 }
 
-.site-title {
-	font-family: "Rubik", "Helvetica Neue", sans-serif;
-	font-size: 36px;
-	font-weight: 400;
-	line-height: 1;
-	margin: 0;
-}
-
-.site-title a {
-	color: #000;
-	position: relative;
-	text-decoration: none;
-}
-
-.site-title a:hover {
-	color: $ti-accent-color;
-}
-
 .site-logo,
 .custom-logo {
 	display: block;
@@ -53,29 +37,22 @@
 	display: block;
 }
 
-.site-title-heading {
-	margin-bottom: 0;
-}
-
 .site-description {
 	color: #000;
-	font-family: "Libre Baskerville", Georgia, serif;
+	font-family: $head-font-family-stack;
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 1.2em;
 	font-style: italic;
-	line-height: 2em;
 	position: relative;
 	text-align: center;
 	width: 100%;
-	margin: 0;
+	margin: 0.4em 0 0 0;
 }
 
-/* Hides description from the customizer when empty */
 .site-description:empty {
 	display: none;
 }
 
-/* Large Screen Styles */
 @media screen and (min-width: 881px) {
 	.site-heading {
 		align-items: center;
@@ -91,15 +68,6 @@
 		display: inline-block;
 	}
 
-	.site-title {
-		font-size: 48px;
-	}
-
-	.has-site-logo .site-title,
-	.wp-custom-logo .site-title {
-		vertical-align: middle;
-	}
-
 	.site-logo,
 	.custom-logo {
 		display: block;
@@ -111,11 +79,4 @@
 		display: inline-block;
 		vertical-align: middle;
 	}
-
-	.site-title-heading {
-		display: inline-block;
-		margin-bottom: 0;
-		vertical-align: middle;
-	}
-
 }

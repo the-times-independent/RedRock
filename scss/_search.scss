@@ -1,3 +1,17 @@
+.search-form {
+    font-family: $meta-font-family-stack;
+    height: 2.3em;
+    
+    .search-field {
+        height: 100%;
+        padding: 0 0.5em;
+    }
+    .search-submit {
+        height: 100%;
+        padding: 0 0.8em;
+    }
+}
+
 .search-results main > .search-form:first-child {
     margin-bottom: 2.5em;
 }

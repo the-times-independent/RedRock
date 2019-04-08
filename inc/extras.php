@@ -91,3 +91,24 @@ function redrock_comment_placeholders($fields) {
 	return $fields;
 }
 add_filter('comment_form_default_fields', 'redrock_comment_placeholders');
+
+function redrock_theme_archive_title($title) {
+    if (is_category()) {
+        $title = single_cat_title('', false);
+    }
+    elseif (is_tag()) {
+        $title = single_tag_title('', false);
+    }
+    elseif (is_author()) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    }
+    elseif (is_post_type_archive()) {
+        $title = post_type_archive_title('', false);
+    }
+    elseif (is_tax()) {
+        $title = single_term_title('', false);
+    }
+  
+    return $title;
+}
+add_filter('get_the_archive_title', 'redrock_theme_archive_title');
