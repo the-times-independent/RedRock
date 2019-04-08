@@ -2,6 +2,10 @@
 	margin: 0;
 	padding-bottom: 120px;
 	width: 100%;
+	
+	.entry-content {
+	    line-height: 1.2;
+	}
 }
 
 @media screen and (max-width: 360px) {

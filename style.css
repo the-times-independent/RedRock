@@ -1578,6 +1578,9 @@ nav .menu-item a:hover {
   padding-bottom: 120px;
   width: 100%;
 }
+#post-list .entry-content {
+  line-height: 1.2;
+}
 
 @media screen and (max-width: 360px) {
   #post-list[style] {
@@ -2004,6 +2007,7 @@ object {
 .wp-block-image figcaption em:nth-last-child(2),
 .wp-block-image figcaption em:nth-last-child(1) {
   float: right;
+  text-align: right;
 }
 
 ul.wp-block-gallery {
