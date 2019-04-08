@@ -87,3 +87,4 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/plugin-enhancements.php';
+require get_template_directory() . '/inc/editor-tweaks.php';
