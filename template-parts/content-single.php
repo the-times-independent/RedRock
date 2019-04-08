@@ -6,6 +6,13 @@
  *
  * @package RedRock
  */
+
+ob_start();
+the_content();
+$thePost = ob_get_clean();
+
+$topElements = extractTopElements($thePost);
+
 ?>
 
 <article
@@ -14,26 +21,15 @@
 >
 	<header class="entry-header">
 		<?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+		<?php echo $topElements; ?>
 		<div class="entry-meta">
 			<?php redrock_entry_meta(); ?>
 		</div>
 	</header>
 
-<?php
-	if (redrock_has_post_thumbnail()) {
-?>
-        <div class="post-hero-image clear-fix">
-            <figure class="entry-image">
-                <?php the_post_thumbnail('full'); ?>
-            </figure>
-        </div>
-<?php
-	}
-?>
-
 	<div class="entry-content">
 <?php
-		the_content();
+		echo $thePost;
         wp_link_pages(array(
             'before' => '<div class="page-links">' . esc_html__('Pages:', 'redrock'),
             'after'  => '</div>',
