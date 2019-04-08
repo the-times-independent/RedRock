@@ -21,9 +21,6 @@ function extractTopElements(&$thePost) {
         $subhead = $subhead->parentNode->removeChild($subhead);
         $topElementsDoc->appendChild($topElementsDoc->importNode($subhead, true));
     }
-    else {
-        return $topElementsDoc->saveHTML();
-    }
     
     $topBlockImage = $xpath->query("/html/body/*[1][@class='wp-block-image'][not(figure[contains(concat(' ', normalize-space(@class), ' '), ' alignleft ')])][not(figure[contains(concat(' ', normalize-space(@class), ' '), ' alignright ')])]");
     
