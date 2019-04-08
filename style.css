@@ -2008,6 +2008,8 @@ object {
 .wp-block-image figcaption em:nth-last-child(1) {
   float: right;
   text-align: right;
+  width: 100%;
+  margin-bottom: 1rem;
 }
 
 ul.wp-block-gallery {
