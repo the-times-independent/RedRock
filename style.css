@@ -1370,14 +1370,6 @@ nav .menu-item a:hover {
 .search .page-header * {
   font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
 }
-.archive .page-header .page-title::after,
-.search .page-header .page-title::after {
-  content: "";
-  width: calc(100% + 3em);
-  border-bottom: gray solid 1px;
-  display: block;
-  margin-top: 0.3em;
-}
 
 .archive .taxonomy-description,
 .search .taxonomy-description {
@@ -1391,17 +1383,26 @@ nav .menu-item a:hover {
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 881px) {
-  .archive .page-header,
-.search .page-header {
-    text-align: left;
-  }
-
+@media screen and (min-width: 640px) {
   .archive .page-header .page-title,
 .search .page-header .page-title {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
+  }
+  .archive .page-header .page-title::after,
+.search .page-header .page-title::after {
+    content: "";
+    width: calc(100% + 3em);
+    border-bottom: gray solid 1px;
+    display: block;
+    margin-top: 0.3em;
+  }
+}
+@media screen and (min-width: 881px) {
+  .archive .page-header,
+.search .page-header {
+    text-align: left;
   }
 
   .archive .taxonomy-description,
@@ -1689,7 +1690,6 @@ nav .menu-item a:hover {
 }
 
 .page .page .entry-title {
-  font-size: 28px;
   line-height: 1.25;
   margin-bottom: 10px;
 }
@@ -1698,10 +1698,6 @@ nav .menu-item a:hover {
 @media screen and (min-width: 881px) {
   .page .page {
     padding: 50px 15%;
-  }
-
-  .page .page .entry-title {
-    font-size: 36px;
   }
 
   .page .page .entry-footer .entry-meta {
@@ -1931,7 +1927,6 @@ nav .menu-item a:hover {
   margin: 0 0 20px;
 }
 .single .hentry .entry-title {
-  font-size: 28px;
   line-height: 1.25;
   margin-bottom: 10px;
 }
@@ -1968,7 +1963,6 @@ nav .menu-item a:hover {
     position: relative;
   }
   .single .hentry .entry-title {
-    font-size: 36px;
     margin-bottom: 10px;
   }
   .single .hentry .entry-content {
