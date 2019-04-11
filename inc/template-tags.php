@@ -23,7 +23,8 @@ function redrock_entry_meta() {
         $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
     }
     
-    $time_string = sprintf($time_string,
+    $time_string = sprintf(
+        $time_string,
         esc_attr(get_the_date('c')),
         esc_html(get_the_date()),
         esc_attr(get_the_modified_date('c')),
@@ -32,11 +33,11 @@ function redrock_entry_meta() {
   
     $entry_meta_output = '';
     
-    $author = '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID'))) . '">' . esc_html(get_the_author()) . '</a></span>';
+    $author = do_shortcode("[molongui_byline]");
     
     $post_date = '<span class="entry-tags-date"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a></span>';
     
-    $categories_list = get_the_term_list(get_the_ID(), 'category', '<span class="entry-categories">', esc_html_x(', ', 'Categories separator', 'redrock'), '</span>');
+    $categories_list = get_the_term_list(get_the_ID(), 'category', '<span class="entry-categories">', ', ', '</span>');
 
     $entry_meta_output .= $author;
     $entry_meta_output .= $post_date;
