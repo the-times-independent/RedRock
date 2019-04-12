@@ -496,6 +496,11 @@ h1 {
 
 h2 {
   font-size: 1.6em;
+  font-style: italic;
+  font-weight: 400;
+}
+h2 em {
+  font-style: none;
 }
 
 h3 {
@@ -1633,8 +1638,8 @@ nav .menu-item a:hover {
   padding-top: 20px;
   margin-bottom: 20px;
 }
-.card .entry-title {
-  margin-bottom: 0;
+.card .entry-header .entry-title {
+  margin-bottom: 0.3em;
 }
 .card.has-post-thumbnail .entry-header {
   border-top: none;
@@ -1761,8 +1766,11 @@ nav .menu-item a:hover {
 
 .entry-meta {
   font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
-  color: #999;
   font-size: 0.8em;
+  line-height: 1.2;
+}
+.single .entry-meta {
+  color: #999;
 }
 
 .entry-meta a {
@@ -1772,12 +1780,6 @@ nav .menu-item a:hover {
 
 .entry-tags a:before {
   content: "#";
-}
-
-.entry-meta > span:after {
-  color: #CCC;
-  content: "/";
-  padding: 0 10px;
 }
 
 .entry-meta > span:last-child:after {
@@ -1935,6 +1937,10 @@ nav .menu-item a:hover {
 .single .wp-block-image {
   text-align: center;
 }
+.single div.wp-block-image {
+  margin-top: -1em;
+}
+
 .single .entry-footer .entry-meta {
   margin-bottom: 20px;
 }
@@ -1957,7 +1963,7 @@ nav .menu-item a:hover {
     margin-right: auto;
   }
   .single .hentry .entry-header {
-    margin: 0 0 50px;
+    margin: 0 0 1.5em;
     width: 100%;
     position: relative;
   }
@@ -2001,8 +2007,18 @@ object {
 .wp-block-image figcaption em:nth-last-child(1) {
   float: right;
   text-align: right;
-  width: 100%;
   margin-bottom: 1rem;
+}
+.entry-header .wp-block-image figcaption em:nth-last-child(2),
+.entry-header .wp-block-image figcaption em:nth-last-child(1) {
+  margin-bottom: 0.2rem;
+}
+.wp-block-image figcaption br:nth-last-child(1) {
+  display: none;
+}
+.wp-block-image figcaption br + em:nth-last-child(2),
+.wp-block-image figcaption br + em:nth-last-child(1) {
+  width: 100%;
 }
 
 ul.wp-block-gallery {

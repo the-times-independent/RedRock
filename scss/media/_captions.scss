@@ -8,7 +8,20 @@
     {
         float: right;
         text-align: right;
-        width: 100%;
         margin-bottom: 1rem;
+        
+        .entry-header & {
+            margin-bottom: .2rem;
+        }
+    }
+    
+    br:nth-last-child(1) {
+        display: none;
+    }
+    
+    br + em:nth-last-child(2),
+    br + em:nth-last-child(1)
+    {
+        width: 100%;
     }
 }

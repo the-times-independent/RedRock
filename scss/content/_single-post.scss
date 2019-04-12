@@ -17,6 +17,10 @@
     }
     .wp-block-image {
         text-align: center;
+        
+        @at-root .single div.wp-block-image {
+            margin-top: -1em;
+        }
     }
     .entry-footer .entry-meta {
         margin-bottom: 20px;
@@ -43,7 +47,7 @@
             margin-right: auto;
             
             .entry-header {
-                margin: 0 0 50px;
+                margin: 0 0 1.5em;
                 width: 100%;
                 position: relative;
             }

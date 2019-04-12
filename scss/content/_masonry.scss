@@ -36,9 +36,10 @@
         border-top: 3px solid black;
         padding-top: 20px;
         margin-bottom: 20px;
-    }
-    .entry-title {
-        margin-bottom: 0;
+        
+        .entry-title {
+            margin-bottom: .3em;
+        }
     }
     &.has-post-thumbnail .entry-header {
         border-top: none;

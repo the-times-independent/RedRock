@@ -31,7 +31,11 @@
 
         <header class="entry-header">
 <?php
-            the_title("<h1 class='entry-title'>", "</h1>" );
+            the_title("<h1 class='entry-title'>", "</h1>");
+            redrock_the_subtitle("<h2 class='entry-subtitle'>", "</h2>");
+            ?><div class="entry-meta"><?php
+                redrock_entry_meta(['withLinks' => false]);
+            ?></div><?php
 ?>
         </header>
 

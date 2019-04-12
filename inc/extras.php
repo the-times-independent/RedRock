@@ -17,7 +17,7 @@ function redrock_body_classes($classes) {
 add_filter('body_class', 'redrock_body_classes');
 
 function redrock_excerpt($excerpt, $raw_excerpt) {
-    if(! $raw_excerpt) {
+    if(!$raw_excerpt) {
         $html_content = apply_filters('the_content', get_the_content());
         if (empty($html_content)) {
             return "";

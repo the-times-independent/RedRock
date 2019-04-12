@@ -56,8 +56,12 @@
 
 .entry-meta {
     font-family: $meta-font-family-stack;
-	color: #999;
 	font-size: .8em;
+	line-height: 1.2;
+	
+	.single & {
+	    color: #999;
+	}
 }
 
 .entry-meta a {
@@ -67,12 +71,6 @@
 
 .entry-tags a:before {
 	content: "#";
-}
-
-.entry-meta > span:after {
-	color: #CCC;
-	content: "/";
-	padding: 0 10px;
 }
 
 .entry-meta > span:last-child:after {

@@ -17,7 +17,39 @@ function redrock_site_logo() {
     }
 }
 
-function redrock_entry_meta() {
+function redrock_category_list() {
+    return get_the_term_list(get_the_ID(), 'category', '<span class="entry-categories">', ', ', '</span>');
+}
+
+function redrock_the_subtitle($before, $after) {
+    $html_content = apply_filters('the_content', get_the_content());
+    if (empty($html_content)) {
+        return;
+    }
+    
+    $document = new DOMDocument();
+    
+    libxml_use_internal_errors(true);
+    $document->loadHTML('<?xml encoding="UTF-8">' . $html_content);
+    libxml_use_internal_errors(false);
+    
+    $xpath = new DOMXPath($document);
+    
+    $subheadQuery = $xpath->query("/html/body/*[position()=1 and self::h2]");
+    
+    if ($subheadQuery->length == 0) {
+        return;
+    }
+    
+    echo $before . $subheadQuery->item(0)->nodeValue . $after;
+}
+
+function redrock_entry_meta($options = []) {
+    $withLinks = true;
+    if (array_key_exists('withLinks', $options)) {
+        $withLinks = $options['withLinks'];
+    }
+    
     $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
     if (get_the_time('U') !== get_the_modified_time('U')) {
         $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -33,25 +65,34 @@ function redrock_entry_meta() {
   
     $entry_meta_output = '';
     
-    $author = do_shortcode("[molongui_byline]");
+    $by = "By ";
+    if (do_shortcode("[molongui_author_name]") == "Staff Report") {
+        $by = "";
+    }
     
-    $post_date = '<span class="entry-tags-date"><a href="' . esc_url(get_permalink()) . '" rel="bookmark">' . $time_string . '</a></span>';
+    if ($withLinks) {
+        $author = '<div class="author vcard">' . $by . do_shortcode("[molongui_byline]") . '</div>';
+    }
+    else {
+        $author = '<div class="author vcard">' . $by . do_shortcode("[molongui_byline linked='no']") . '</div>';
+    }
     
-    $categories_list = get_the_term_list(get_the_ID(), 'category', '<span class="entry-categories">', ', ', '</span>');
+    $post_date = '<div class="entry-tags-date">' . $time_string . '</div>';
 
     $entry_meta_output .= $author;
     $entry_meta_output .= $post_date;
-    $entry_meta_output .= $categories_list;
     echo $entry_meta_output;
     
-    edit_post_link(
-        sprintf(
-            'Edit %s',
-            the_title('<span class="screen-reader-text">"', '"</span>', false)
-      ),
-        '<span class="edit-link">',
-        '</span>'
-  );
+    if ($withLinks) {
+        edit_post_link(
+            sprintf(
+                'Edit %s',
+                the_title('<span class="screen-reader-text">"', '"</span>', false)
+            ),
+            '  <span class="edit-link">',
+            '</span>'
+        );
+    }
 }
 
 
