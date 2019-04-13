@@ -1949,6 +1949,31 @@ nav .menu-item a:hover {
   margin-top: -3px;
 }
 
+#page .sd-button {
+  padding-right: 5px;
+}
+#page .sd-button .share-count {
+  padding: 4px;
+  line-height: 1;
+  margin-left: 4px;
+  border-radius: 7px;
+}
+
+#page #jp-relatedposts {
+  font-size: 0.8em;
+}
+#page #jp-relatedposts .jp-relatedposts-post-img {
+  margin-bottom: 0.3em;
+}
+#page #jp-relatedposts .jp-relatedposts-post-title {
+  font-size: 1.2em;
+  line-height: 1.1;
+  margin-bottom: 0.2em;
+}
+#page #jp-relatedposts .jp-relatedposts-post-excerpt {
+  font-size: 1em;
+}
+
 /* Large Screens */
 @media screen and (min-width: 881px) {
   .single #page .site-main {

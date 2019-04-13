@@ -31,6 +31,33 @@
 	margin-top: -3px;
 }
 
+#page .sd-button {
+    padding-right: 5px;
+
+    .share-count {
+        padding: 4px;
+        line-height: 1;
+        margin-left: 4px;
+        border-radius: 7px;
+    }
+}
+
+#page #jp-relatedposts {
+    font-size: .8em;
+    
+    .jp-relatedposts-post-img {
+        margin-bottom: .3em
+    }    
+    .jp-relatedposts-post-title {
+        font-size: 1.2em;
+        line-height: 1.1;
+        margin-bottom: .2em;
+    }
+    .jp-relatedposts-post-excerpt {
+        font-size: 1em;
+    }
+}
+
 /* Large Screens */
 @media screen and (min-width: 881px) {
 
