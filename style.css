@@ -2129,6 +2129,10 @@ ul.wp-block-gallery li {
 .paying-wages img {
   vertical-align: middle;
   margin: 0;
+  max-height: 250px;
+  max-width: 728px;
+  height: auto;
+  width: auto;
 }
 .paying-wages.before-content {
   margin-bottom: 3em;

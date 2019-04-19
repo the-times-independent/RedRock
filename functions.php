@@ -74,7 +74,6 @@ function redrock_styles_and_scripts() {
     redrock_styles();
     redrock_scripts();
 }
-
 add_action('wp_enqueue_scripts', 'redrock_styles_and_scripts');
 
 function redrock_html_js_class () {

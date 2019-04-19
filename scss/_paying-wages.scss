@@ -15,6 +15,10 @@
     img {
         vertical-align: middle;
         margin: 0;
+        max-height: 250px;
+        max-width: 728px;
+        height: auto;
+        width: auto;
     }
     &.before-content {
         margin-bottom: 3em;
