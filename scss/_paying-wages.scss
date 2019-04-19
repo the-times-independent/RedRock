@@ -6,12 +6,15 @@
     border-top: solid 1px $ad-border-color;
     border-bottom: solid 1px $ad-border-color;
     padding-bottom: 1.2em;
-    max-width: 728px;
     
     .wages-adlabel {
         color: $ad-label;
         font-size: .8rem;
         margin: .4em;
+    }
+    a {
+        display: block;
+        max-width: 728px;
     }
     img {
         vertical-align: middle;
