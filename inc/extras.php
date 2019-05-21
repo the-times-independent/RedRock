@@ -16,38 +16,6 @@ function redrock_body_classes($classes) {
 }
 add_filter('body_class', 'redrock_body_classes');
 
-function redrock_excerpt($excerpt, $raw_excerpt) {
-    if(!$raw_excerpt) {
-        $html_content = apply_filters('the_content', get_the_content());
-        if (empty($html_content)) {
-            return "";
-        }
-        
-        $domd = new DOMDocument();
-        
-        libxml_use_internal_errors(true);
-        $domd->loadHTML('<?xml encoding="UTF-8">' . $html_content);
-        libxml_use_internal_errors(false);
-        
-        $domx = new DOMXPath($domd);
-        
-        if (in_category("letter-to-the-editor")) {
-            $items = $domx->query("/html/body/p[2]");
-        }
-        else {
-            $items = $domx->query("/html/body/p[1]");
-        }
-        
-        if (empty($items)) {
-            return "";
-        }
-        
-        $excerpt = $items->item(0)->textContent;
-    }
-    return $excerpt;
-}
-add_filter('wp_trim_excerpt', 'redrock_excerpt', 10, 2);
-
 function redrock_slug_post_classes($classes) {
 	if (is_single()) {
 		$classes[] = 'clear-fix';
