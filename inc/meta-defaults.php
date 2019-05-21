@@ -4,6 +4,10 @@ function redrock_get_fallback_featured_image_id($post_id) {
     if (!$post_id) {
         $post_id = get_the_ID();
     }
+    if (is_page($post_id)) {
+        return false;
+    }
+    
     $html_content = apply_filters('the_content', get_post_field('post_content', $post_id));
     
     if (empty($html_content)) {
@@ -35,7 +39,7 @@ function redrock_get_fallback_featured_image_id($post_id) {
 }
 
 function redrock_featured_image_id($value, $post_id = '', $meta_key = '') {
-    if ($meta_key != "_thumbnail_id") {
+    if ($meta_key != "_thumbnail_id" || is_admin()) {
         return $value;
     }
     
