@@ -1,5 +1,8 @@
 <?php
 
+$redrockTopBlockImageQueryString = "/html/body/*[1][@class='wp-block-image'][not(figure[contains(concat(' ', normalize-space(@class), ' '), ' alignleft ')])][not(figure[contains(concat(' ', normalize-space(@class), ' '), ' alignright ')])]";
+global $redrockTopBlockImageQueryString;
+
 function extractTopElements(&$thePost) {
     if (empty($thePost)) {
         return "";
@@ -22,7 +25,8 @@ function extractTopElements(&$thePost) {
         $topElementsDoc->appendChild($topElementsDoc->importNode($subhead, true));
     }
     
-    $topBlockImage = $xpath->query("/html/body/*[1][@class='wp-block-image'][not(figure[contains(concat(' ', normalize-space(@class), ' '), ' alignleft ')])][not(figure[contains(concat(' ', normalize-space(@class), ' '), ' alignright ')])]");
+    global $redrockTopBlockImageQueryString;
+    $topBlockImage = $xpath->query($redrockTopBlockImageQueryString);
     
     if ($topBlockImage->length != 0) {
         $topBlockImage = $topBlockImage->item(0);
