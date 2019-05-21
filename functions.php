@@ -8,8 +8,7 @@ function redrock_setup() {
 		'width'       => 1500,
 		'flex-width'  => true,
 		'header-text' => array(
-			'site-title',
-			'site-description'
+			'site-title'
 		),
 	));
 	
@@ -32,9 +31,9 @@ function redrock_setup() {
 	));
 	
 	add_theme_support('post-formats', array(
-		'aside',
 		'image',
 		'video',
+		'audio'
     ));
 }
 add_action('after_setup_theme', 'redrock_setup');
