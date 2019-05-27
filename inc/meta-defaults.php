@@ -76,9 +76,9 @@ function redrock_text_excerpt_video_or_photo($domx) {
     return "";
 }
 
-function redrock_excerpt($excerpt) {
-    if (!has_excerpt()) {
-        $html_content = apply_filters('the_content', get_the_content());
+function redrock_excerpt($excerpt, $post) {
+    if (!has_excerpt($post)) {
+        $html_content = apply_filters('the_content', $post->post_content);
         
         if (empty($html_content)) {
             return "";
@@ -110,7 +110,7 @@ function redrock_excerpt($excerpt) {
     }
     return $excerpt;
 }
-add_filter('get_the_excerpt', 'redrock_excerpt');
+add_filter('get_the_excerpt', 'redrock_excerpt', 10, 2);
 
 function redrock_get_video_poster_id($domx) {
     $items = $domx->query("/html/body//video/@poster");
