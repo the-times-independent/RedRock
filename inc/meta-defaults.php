@@ -24,7 +24,7 @@ function redrock_get_fallback_featured_image_id($post_id) {
     
     $imageID = false;
     
-    if (get_post_type() == "video") {
+    if (has_post_format("video")) {
         $imageID = redrock_get_video_poster_id($domx);
     }
     else {
@@ -59,6 +59,23 @@ function redrock_featured_image_id($value, $post_id = '', $meta_key = '') {
 }
 add_filter('get_post_metadata', 'redrock_featured_image_id', 100, 4);
 
+function redrock_text_excerpt_video_or_photo($domx) {
+    $paraItem = $domx->query("/html/body/p[1]");
+    
+    if ($paraItem->length == 0) {
+        $captionItem = $domx->query("/html/body/figure[1]/figcaption[1]");
+        
+        if (!($captionItem->length == 0)) {
+            return $captionItem->item(0)->textContent;
+        }
+    }
+    else {
+        return var_dump($paraItem);
+    }
+    
+    return "";
+}
+
 function redrock_excerpt($excerpt) {
     if (!$excerpt || empty($excerpt)) {
         $html_content = apply_filters('the_content', get_the_content());
@@ -77,11 +94,14 @@ function redrock_excerpt($excerpt) {
         if (in_category("letter-to-the-editor")) {
             $items = $domx->query("/html/body/p[2]");
         }
+        else if (has_post_format(array("video", "image"))) {
+            return redrock_text_excerpt_video_or_photo($domx);
+        }
         else {
             $items = $domx->query("/html/body/p[1]");
         }
         
-        if (empty($items)) {
+        if ($items->length == 0) {
             return "";
         }
         
@@ -94,7 +114,7 @@ add_filter('get_the_excerpt', 'redrock_excerpt');
 function redrock_get_video_poster_id($domx) {
     $items = $domx->query("/html/body//video/@poster");
 
-    if (!empty($items)) {
+    if (!($items->length == 0)) {
         return redrock_id_from_url($items->item(0)->nodeValue);
     }
     return false;
@@ -128,7 +148,16 @@ function redrock_get_largest_image_id($domx) {
         }
         
         $imageSizeText = $image_tag->getAttribute('data-orig-size');
+        
+        if (!$image_tag->hasAttribute('data-orig-size')) {
+            continue;
+        }
+        
         preg_match("/^(\d+),(\d+)$/", $imageSizeText, $output);
+        
+        if (!array_key_exists(2, $output)) {
+            continue;
+        }
         
         $pixels = ((int) $output[1]) * ((int) $output[2]);
         
