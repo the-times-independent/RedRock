@@ -11,7 +11,7 @@ ob_start();
 the_content();
 $thePost = ob_get_clean();
 
-if (get_post_type() == "post") {
+if (!get_post_format()) {
     $topElements = extractTopElements($thePost);
 }
 
