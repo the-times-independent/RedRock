@@ -70,15 +70,16 @@ function redrock_text_excerpt_video_or_photo($domx) {
         }
     }
     else {
-        return var_dump($paraItem);
+        return $paraItem->item(0)->textContent;
     }
     
     return "";
 }
 
 function redrock_excerpt($excerpt) {
-    if (!$excerpt || empty($excerpt)) {
+    if (!has_excerpt()) {
         $html_content = apply_filters('the_content', get_the_content());
+        
         if (empty($html_content)) {
             return "";
         }

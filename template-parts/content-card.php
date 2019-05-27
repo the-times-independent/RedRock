@@ -18,7 +18,7 @@
         rel="bookmark"
     >
 <?php
-        if ( redrock_has_post_thumbnail() ) {
+        if (redrock_has_post_thumbnail()) {
 ?>
             <div class="entry-image-section">
                 <figure class="entry-image">
