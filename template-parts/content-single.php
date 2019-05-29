@@ -11,6 +11,7 @@ ob_start();
 the_content();
 $thePost = ob_get_clean();
 
+$topElements = '';
 if (!get_post_format()) {
     $topElements = redrock_remove_top_elements($thePost);
 }
