@@ -1,9 +1,6 @@
 <?php
 
 function redrock_get_fallback_featured_image_id($post_id) {
-    if (!$post_id) {
-        $post_id = get_the_ID();
-    }
     if (is_page($post_id)) {
         return false;
     }
@@ -38,11 +35,26 @@ function redrock_get_fallback_featured_image_id($post_id) {
     return $imageID;
 }
 
-function redrock_featured_image_id($value, $post_id = '', $meta_key = '') {
+function redrock_featured_image_id($value, $post_id = false, $meta_key = '') {
     if ($meta_key != "_thumbnail_id" || is_admin()) {
         return $value;
     }
     
+    $image_id = false;
+    
+    if (!$post_id) {
+        $post_id = get_the_ID();
+    }
+    
+    $image_id = redrock_get_feature_image_id_from_cache($post_id, $meta_key);
+    
+    if (!$image_id) {
+        return redrock_get_fallback_featured_image_id($post_id);
+    }
+}
+add_filter('get_post_metadata', 'redrock_featured_image_id', 100, 4);
+
+function redrock_get_feature_image_id_from_cache($post_id, $meta_key) {
     $meta_cache = wp_cache_get($post_id, "post_meta");
  
     if (!$meta_cache) {
@@ -54,10 +66,9 @@ function redrock_featured_image_id($value, $post_id = '', $meta_key = '') {
         return maybe_unserialize($meta_cache[$meta_key][0]);
     }
     else {
-        return redrock_get_fallback_featured_image_id($post_id);
+        return false;
     }
 }
-add_filter('get_post_metadata', 'redrock_featured_image_id', 100, 4);
 
 function redrock_text_excerpt_video_or_photo($domx) {
     $paraItem = $domx->query("/html/body/p[1]");
