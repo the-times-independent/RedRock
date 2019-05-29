@@ -12,7 +12,7 @@ the_content();
 $thePost = ob_get_clean();
 
 if (!get_post_format()) {
-    $topElements = extractTopElements($thePost);
+    $topElements = redrock_remove_top_elements($thePost);
 }
 
 ?>

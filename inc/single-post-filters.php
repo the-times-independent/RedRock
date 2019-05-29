@@ -3,7 +3,7 @@
 $redrockTopBlockImageQueryString = "/html/body/*[(position()=1) or (position()=2 and preceding-sibling::h2)][@class='wp-block-image'][not(figure[contains(concat(' ', normalize-space(@class), ' '), ' alignleft ')])][not(figure[contains(concat(' ', normalize-space(@class), ' '), ' alignright ')])]";
 global $redrockTopBlockImageQueryString;
 
-function extractTopElements(&$thePost) {
+function redrock_remove_top_elements(&$thePost) {
     if (empty($thePost)) {
         return "";
     }
