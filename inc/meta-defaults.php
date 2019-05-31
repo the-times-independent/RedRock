@@ -49,8 +49,10 @@ function redrock_featured_image_id($value, $post_id = false, $meta_key = '') {
     $image_id = redrock_get_feature_image_id_from_cache($post_id, $meta_key);
     
     if (!$image_id) {
-        return redrock_get_fallback_featured_image_id($post_id);
+        $image_id = redrock_get_fallback_featured_image_id($post_id);
     }
+    
+    return $image_id;
 }
 add_filter('get_post_metadata', 'redrock_featured_image_id', 100, 4);
 
