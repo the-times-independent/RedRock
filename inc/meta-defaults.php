@@ -36,25 +36,24 @@ function redrock_get_fallback_featured_image_id($post_id) {
 }
 
 function redrock_featured_image_id($value, $post_id = false, $meta_key = '') {
-    if ($meta_key != "_thumbnail_id" || is_admin()) {
+    if ((is_single() || in_the_loop()) && ($meta_key == "_thumbnail_id") && !is_admin()) {    
+        if (!$post_id) {
+            $post_id = get_the_ID();
+        }
+    
+        $image_id = redrock_get_feature_image_id_from_cache($post_id, $meta_key);
+    
+        if (!$image_id) {
+            $image_id = redrock_get_fallback_featured_image_id($post_id);
+        }
+    
+        return $image_id;
+    }
+    else {
         return $value;
     }
-    
-    $image_id = false;
-    
-    if (!$post_id) {
-        $post_id = get_the_ID();
-    }
-    
-    $image_id = redrock_get_feature_image_id_from_cache($post_id, $meta_key);
-    
-    if (!$image_id) {
-        $image_id = redrock_get_fallback_featured_image_id($post_id);
-    }
-    
-    return $image_id;
 }
-add_filter('get_post_metadata', 'redrock_featured_image_id', 100, 4);
+add_filter('get_post_metadata', 'redrock_featured_image_id', 10, 4);
 
 function redrock_get_feature_image_id_from_cache($post_id, $meta_key) {
     $meta_cache = wp_cache_get($post_id, "post_meta");
