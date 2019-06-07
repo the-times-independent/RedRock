@@ -769,19 +769,10 @@ nav .menu-item a:hover {
   border-top: 1px solid #CCC;
   margin-bottom: -1px;
 }
-
-.main-navigation .sub-menu li:before,
-.main-navigation .children li:before {
-  content: "— ";
-  display: inline-block;
-  line-height: 1.5em;
-  padding-left: 8px;
-  padding-top: 12px;
-  position: absolute;
-  z-index: 0;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+.main-navigation .sub-menu, .main-navigation .sub-menu .menu-item,
+.main-navigation .children,
+.main-navigation .children .menu-item {
+  min-width: 8em;
 }
 
 .main-navigation .sub-menu li:hover:before,
@@ -802,6 +793,7 @@ nav .menu-item a:hover {
   display: block;
   padding: 12px 20px;
   text-decoration: none;
+  text-align: center;
 }
 
 .main-navigation ul > li li a {
@@ -1326,9 +1318,13 @@ nav .menu-item a:hover {
 .main-navigation .sub-menu li.menu-item-has-children:before,
 .main-navigation .children li.menu-item-has-children:before {
     content: "";
+    float: left;
+    display: inline-block;
     font-family: "FontAwesome";
     font-weight: normal;
-    margin: -2px 5px 0 0;
+    margin: 0 0 0 5px;
+    speak: none;
+    vertical-align: baseline;
   }
 
   .main-navigation .page_item_has_children .page_item_has_children > a:after,
@@ -1939,7 +1935,7 @@ nav .menu-item a:hover {
   text-align: center;
 }
 .single div.wp-block-image {
-  margin-top: -1em;
+  margin-bottom: -1em;
 }
 
 .single .entry-footer .entry-meta {
@@ -2055,9 +2051,14 @@ object {
 .wp-block-image figcaption br + em:nth-last-child(1) {
   width: 100%;
 }
+.wp-block-image figcaption:after {
+  content: "";
+  clear: both;
+  display: block;
+}
 
 ul.wp-block-gallery {
-  margin-bottom: 1em;
+  margin: 1em 0;
 }
 ul.wp-block-gallery li {
   cursor: pointer;

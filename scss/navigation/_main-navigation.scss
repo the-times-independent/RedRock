@@ -21,20 +21,10 @@
 	padding-left: 1.5em;
 	border-top: 1px solid #CCC;
 	margin-bottom: -1px;
-}
-
-.main-navigation .sub-menu li:before,
-.main-navigation .children li:before {
-	content: "\2014\00a0";
-	display: inline-block;
-	line-height: 1.5em;
-	padding-left: 8px;
-	padding-top: 12px;
-	position: absolute;
-	z-index: 0;
-	-webkit-transition: all 0.2s ease;
-	-moz-transition: all 0.2s ease;
-	transition: all 0.2s ease;
+	
+	&, .menu-item {
+	    min-width: 8em;
+	}
 }
 
 .main-navigation .sub-menu li:hover:before,
@@ -55,6 +45,7 @@
 	display: block;
 	padding: 12px 20px;
 	text-decoration: none;
+	text-align: center;
 }
 
 .main-navigation ul > li li a {

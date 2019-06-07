@@ -24,4 +24,10 @@
     {
         width: 100%;
     }
+    
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
 }
