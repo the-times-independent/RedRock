@@ -17,10 +17,6 @@
     }
     .wp-block-image {
         text-align: center;
-        
-        @at-root .single div.wp-block-image {
-            margin-bottom: -1em;
-        }
     }
     .entry-footer .entry-meta {
         margin-bottom: 20px;
