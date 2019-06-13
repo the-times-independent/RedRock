@@ -1934,10 +1934,6 @@ nav .menu-item a:hover {
 .single .wp-block-image {
   text-align: center;
 }
-.single div.wp-block-image {
-  margin-bottom: -1em;
-}
-
 .single .entry-footer .entry-meta {
   margin-bottom: 20px;
 }
