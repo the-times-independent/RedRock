@@ -640,14 +640,19 @@ header {
   font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
 }
 
-.top-bar {
+#top-bar {
   font-size: 0.8em;
   padding: 1em;
   background: #dddddd;
   border-bottom: 1px solid gray;
 }
-.top-bar .search-form {
+#top-bar .search-form {
   margin: 0;
+  display: inline-block;
+}
+#top-bar .sign-in-or-register {
+  position: relative;
+  right: 0;
 }
 
 .site-heading {

@@ -2,7 +2,7 @@ header {
     font-family: $meta-font-family-stack;
 }
 
-.top-bar {
+#top-bar {
     font-size: .8em;
     padding: 1em;
     background: #dddddd;
@@ -10,6 +10,11 @@ header {
     
     .search-form {
         margin: 0;
+        display: inline-block;
+    }
+    .sign-in-or-register {
+        position: relative;
+        right: 0;
     }
 }
 

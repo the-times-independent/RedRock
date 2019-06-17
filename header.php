@@ -12,10 +12,13 @@
         <div id="page" class="site">
             <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
             <header id="masthead" class="site-header" role="banner">
-                <div class="top-bar">
-                    <div class="top-search-wrap">
+                <div id="top-bar">
+                    <span class="top-search-wrap">
                         <?php get_search_form(); ?>
-                    </div>
+                    </span>
+                    <span class="sign-in-or-register">
+                        <?php echo do_shortcode("[memberful_sign_in_link]Sign in[/memberful_sign_in_link] or [memberful_register_link]register[/memberful_register_link]") ?>
+                    </span>
                 </div>
                 <div class="col-width header-wrap">
 <?php
