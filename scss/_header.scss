@@ -7,14 +7,20 @@ header {
     padding: 1em;
     background: #dddddd;
     border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     
-    .search-form {
-        margin: 0;
-        display: inline-block;
+    .top-search-wrap {
+        float: left;
+        
+        .search-form {
+            margin: 0;
+            display: inline-block;
+        }
     }
-    .sign-in-or-register {
-        position: relative;
-        right: 0;
+    .user-account {
+        display: inline-block;
     }
 }
 

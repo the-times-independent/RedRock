@@ -645,14 +645,19 @@ header {
   padding: 1em;
   background: #dddddd;
   border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-#top-bar .search-form {
+#top-bar .top-search-wrap {
+  float: left;
+}
+#top-bar .top-search-wrap .search-form {
   margin: 0;
   display: inline-block;
 }
-#top-bar .sign-in-or-register {
-  position: relative;
-  right: 0;
+#top-bar .user-account {
+  display: inline-block;
 }
 
 .site-heading {

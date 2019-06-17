@@ -16,8 +16,15 @@
                     <span class="top-search-wrap">
                         <?php get_search_form(); ?>
                     </span>
-                    <span class="sign-in-or-register">
-                        <?php echo do_shortcode("[memberful_sign_in_link]Sign in[/memberful_sign_in_link] or [memberful_register_link]register[/memberful_register_link]") ?>
+                    <span class="user-account">
+<?php
+                        if (is_user_logged_in()) {
+                            echo do_shortcode("[memberful_account_link]Account[/memberful_account_link]");
+                        }
+                        else {
+                            echo do_shortcode("[memberful_sign_in_link]Sign in[/memberful_sign_in_link] or [memberful_register_link]register[/memberful_register_link]");
+                        }
+?>
                     </span>
                 </div>
                 <div class="col-width header-wrap">
