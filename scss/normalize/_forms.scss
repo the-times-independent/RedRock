@@ -1,7 +1,10 @@
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+a.button,
+a.button:visited {
+    display: inline-block;
 	background: #FFF;
 	border: 2px solid #000;
 	border-radius: 0;
@@ -11,27 +14,18 @@ input[type="submit"] {
 	line-height: 1;
 	padding: 15px 20px;
 	-webkit-appearance: none;
-}
-
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	background: #000;
-	color: #FFF;
-}
-
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	background: #000;
-	color: #FFF;
-	outline: 0;
+	
+	&:hover {
+        background: #000;
+        color: #FFF;
+        text-decoration: none;
+	}
+	
+	&:active, &:focus {
+        background: #000;
+        color: #FFF;
+        outline: 0;
+	}
 }
 
 input[type="text"],
@@ -45,15 +39,10 @@ textarea {
 	color: $ti-accent-color;
 	padding: 12px 15px;
 	-webkit-appearance: none;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-	color: #000;
+	
+	&:focus {
+        color: #000;
+	}
 }
 
 input[type="text"],

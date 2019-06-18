@@ -19,10 +19,10 @@
                     <span class="user-account">
 <?php
                         if (is_user_logged_in()) {
-                            echo do_shortcode("[memberful_account_link]Account[/memberful_account_link]");
+                            echo do_shortcode("[memberful_account_link class='button']Account[/memberful_account_link]");
                         }
                         else {
-                            echo do_shortcode("[memberful_sign_in_link]Sign in[/memberful_sign_in_link] or [memberful_register_link]register[/memberful_register_link]");
+                            echo do_shortcode("[memberful_sign_in_link class='button']Sign in[/memberful_sign_in_link] [memberful_register_link class='button']Register[/memberful_register_link]");
                         }
 ?>
                     </span>

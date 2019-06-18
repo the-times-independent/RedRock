@@ -21,6 +21,11 @@ header {
     }
     .user-account {
         display: inline-block;
+        
+        a.button,
+        button {
+            padding: .5em .8em;
+        }
     }
 }
 

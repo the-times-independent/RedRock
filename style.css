@@ -302,7 +302,7 @@ html {
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -376,7 +376,10 @@ a:hover, a:active {
 button,
 input[type=button],
 input[type=reset],
-input[type=submit] {
+input[type=submit],
+a.button,
+a.button:visited {
+  display: inline-block;
   background: #FFF;
   border: 2px solid #000;
   border-radius: 0;
@@ -387,23 +390,27 @@ input[type=submit] {
   padding: 15px 20px;
   -webkit-appearance: none;
 }
-
 button:hover,
 input[type=button]:hover,
 input[type=reset]:hover,
-input[type=submit]:hover {
+input[type=submit]:hover,
+a.button:hover,
+a.button:visited:hover {
   background: #000;
   color: #FFF;
+  text-decoration: none;
 }
-
-button:focus,
-input[type=button]:focus,
-input[type=reset]:focus,
-input[type=submit]:focus,
-button:active,
+button:active, button:focus,
 input[type=button]:active,
+input[type=button]:focus,
 input[type=reset]:active,
-input[type=submit]:active {
+input[type=reset]:focus,
+input[type=submit]:active,
+input[type=submit]:focus,
+a.button:active,
+a.button:focus,
+a.button:visited:active,
+a.button:visited:focus {
   background: #000;
   color: #FFF;
   outline: 0;
@@ -421,7 +428,6 @@ textarea {
   padding: 12px 15px;
   -webkit-appearance: none;
 }
-
 input[type=text]:focus,
 input[type=email]:focus,
 input[type=url]:focus,
@@ -658,6 +664,10 @@ header {
 }
 #top-bar .user-account {
   display: inline-block;
+}
+#top-bar .user-account a.button,
+#top-bar .user-account button {
+  padding: 0.5em 0.8em;
 }
 
 .site-heading {
