@@ -89,3 +89,4 @@ require get_template_directory() . '/inc/single-post-filters.php';
 require get_template_directory() . '/inc/meta-defaults.php';
 require get_template_directory() . '/inc/open-graph.php';
 require get_template_directory() . "/inc/share-image-default.php";
+require get_template_directory() . '/inc/admin-tweaks.php';
