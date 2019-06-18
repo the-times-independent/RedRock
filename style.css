@@ -226,7 +226,6 @@ input,
 select,
 textarea {
   color: #555;
-  line-height: 1.5;
 }
 
 h1,
@@ -373,6 +372,13 @@ a:hover, a:active {
   outline: 0;
 }
 
+form {
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
+}
+form > * {
+  vertical-align: middle;
+}
+
 button,
 input[type=button],
 input[type=reset],
@@ -435,14 +441,6 @@ input[type=password]:focus,
 input[type=search]:focus,
 textarea:focus {
   color: #000;
-}
-
-input[type=text],
-input[type=email],
-input[type=url],
-input[type=password],
-input[type=search] {
-  padding: 11px 15px;
 }
 
 textarea {
@@ -2361,7 +2359,6 @@ ul.wp-block-gallery li {
   }
 }
 .search-form {
-  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
   height: 2.3em;
 }
 .search-form .search-field {
