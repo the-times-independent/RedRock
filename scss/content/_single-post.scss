@@ -56,7 +56,10 @@
 
 /* Large Screens */
 @media screen and (min-width: 881px) {
-
+    .content-width {
+        max-width: 600px;
+    }
+    
 	.single {
 	    #page .site-main {
             padding: 50px 0 0;

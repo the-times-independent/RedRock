@@ -22,9 +22,12 @@ a.button:visited {
 	line-height: 1;
 	padding: 15px 20px;
 	-webkit-appearance: none;
+	-webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
 	
 	&:hover {
-        background: #000;
+        background: $ti-accent-color;
         color: #FFF;
         text-decoration: none;
 	}

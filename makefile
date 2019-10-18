@@ -1,12 +1,15 @@
 .DEFAULT_GOAL := clean-then-compile
+in-file = ./scss/all.scss
+out-file = ./style.css
 
 clean-then-compile: clean style
+continuous: clean continuous-core
 
 style:
-	sass ./scss/all.scss ./style.css
+	sass ${in-file} ${out-file}
 
 clean:
-	rm ./style.css ./style.css.map
+	-rm ${out-file}*
 
 continuous:
-	sass --watch ./scss/all.scss:./style.css
+	sass --watch ${in-file}:${out-file}

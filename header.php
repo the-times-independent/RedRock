@@ -19,10 +19,13 @@
                     <span class="user-account">
 <?php
                         if (is_user_logged_in()) {
-                            echo do_shortcode("[memberful_account_link class='button']Account[/memberful_account_link]");
+                            $accountURL = memberful_account_url();
+                            ?><a class='button' href='<?php $accountURL ?>'>Account</a><?php
                         }
                         else {
-                            echo do_shortcode("[memberful_sign_in_link class='button']Sign in[/memberful_sign_in_link] [memberful_register_link class='button']Register[/memberful_register_link]");
+                            $signInURL = memberful_sign_in_url();
+                            $subscribeURL = "/subscribe";
+                            ?><a class='button' href='<?php echo $signInURL; ?>'>Sign in</a> <a class='button' href='<?php echo $subscribeURL; ?>'>Subscribe</a><?php
                         }
 ?>
                     </span>

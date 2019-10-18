@@ -43,13 +43,13 @@ if (post_password_required()) {
 <?php
                             if (get_previous_comments_link()) {
 ?>
-                                <div class="nav-previous"><?php previous_comments_link("Older Comments"); ?></div>
+                                <div class="button nav-previous"><?php previous_comments_link("Older Comments"); ?></div>
 <?php
                             }
                             
                             if (get_next_comments_link()) {
 ?>
-                                <div class="nav-next"><?php next_comments_link("Newer Comments"); ?></div>
+                                <div class="button nav-next"><?php next_comments_link("Newer Comments"); ?></div>
 <?php
                             }
 ?>

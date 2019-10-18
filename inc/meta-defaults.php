@@ -134,8 +134,7 @@ function redrock_get_video_poster_id($domx) {
 }
 
 function redrock_get_top_image_id($domx) {
-    global $redrockTopBlockImageQueryString;
-    $items = $domx->query($redrockTopBlockImageQueryString);
+    $items = $domx->query(RR_TOP_BLOCK_IMAGE_QUERY_STRING);
 
     if ($items->length > 0) {
         return $items->item(0)

@@ -25,6 +25,10 @@ header {
         a.button,
         button {
             padding: .5em .8em;
+            
+            & + a.button, button {
+                margin-left: .5em;
+            }
         }
     }
 }

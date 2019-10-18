@@ -395,6 +395,9 @@ a.button:visited {
   line-height: 1;
   padding: 15px 20px;
   -webkit-appearance: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 button:hover,
 input[type=button]:hover,
@@ -402,7 +405,7 @@ input[type=reset]:hover,
 input[type=submit]:hover,
 a.button:hover,
 a.button:visited:hover {
-  background: #000;
+  background: #CC6633;
   color: #FFF;
   text-decoration: none;
 }
@@ -666,6 +669,11 @@ header {
 #top-bar .user-account a.button,
 #top-bar .user-account button {
   padding: 0.5em 0.8em;
+}
+#top-bar .user-account a.button + a.button, #top-bar .user-account a.button button,
+#top-bar .user-account button + a.button,
+#top-bar .user-account button button {
+  margin-left: 0.5em;
 }
 
 .site-heading {
@@ -1704,6 +1712,15 @@ nav .menu-item a:hover {
     margin-bottom: 30px;
   }
 }
+#page {
+  background-color: #FFF;
+}
+
+.content-width {
+  width: 600px;
+  margin: auto;
+}
+
 .sticky {
   display: block;
 }
@@ -1721,15 +1738,6 @@ nav .menu-item a:hover {
   display: inline;
 }
 
-.post-hero-image {
-  border: 1px solid #DDD;
-  margin-bottom: 10px;
-}
-
-.post-hero-image .entry-image {
-  margin: -1px;
-}
-
 .entry-image {
   line-height: 0;
   margin: 0;
@@ -1742,10 +1750,6 @@ nav .menu-item a:hover {
   color: #999;
   font-size: 14px;
   padding: 15px;
-}
-
-.entry-image .entry-image-caption span {
-  margin-right: 10px;
 }
 
 .entry-image-section {
@@ -1969,6 +1973,10 @@ nav .menu-item a:hover {
 
 /* Large Screens */
 @media screen and (min-width: 881px) {
+  .content-width {
+    max-width: 600px;
+  }
+
   .single #page .site-main {
     padding: 50px 0 0;
   }
@@ -2213,7 +2221,6 @@ ul.wp-block-gallery li {
   font-size: 20px;
   font-weight: normal;
   line-height: 0;
-  margin: 0 0 0 5px;
   speak: none;
   vertical-align: baseline;
 }
@@ -2225,7 +2232,6 @@ ul.wp-block-gallery li {
   font-size: 20px;
   font-weight: normal;
   line-height: 0;
-  margin: 0 0 0 5px;
   speak: none;
   vertical-align: baseline;
 }
@@ -2234,22 +2240,8 @@ ul.wp-block-gallery li {
   float: right;
 }
 
-.posts-navigation a {
-  border: 2px solid #000;
-  color: #CC6633;
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
-  margin: 0;
-  padding: 12px 40px;
-}
-
-.posts-navigation a:hover,
-.posts-navigation a:active {
-  background: #000;
-  color: #FFF;
-  text-decoration: none;
+.posts-navigation a.button {
+  padding: 12px 15px;
 }
 
 /* Single navigation */
@@ -2752,6 +2744,27 @@ ul.wp-block-gallery li {
 /* WP Stats */
 img#wpstats {
   display: none !important;
+}
+
+#paywall {
+  text-align: left;
+  background-image: linear-gradient(135deg, white 0%, white 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(-135deg, white 0%, white 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 13%, rgba(0, 0, 0, 0.17) 41%, rgba(0, 0, 0, 0.06) 50%, rgba(0, 0, 0, 0.01) 80%, rgba(0, 0, 0, 0) 100%);
+  background-position: top center, top center, top center;
+  background-size: 0.5em 0.5em, 0.5em 0.5em, 100% 2em;
+  background-repeat: repeat-x;
+}
+
+#paywall * {
+  font-family: myriad-pro, “Helvetica Neue”, Helvetica, sans-serif;
+}
+
+#paywall #footer-background {
+  z-index: -2;
+  position: fixed;
+  height: 50vh;
+  background-color: #ddd;
+  bottom: 0;
+  width: 100vw;
 }
 
 /*# sourceMappingURL=style.css.map */

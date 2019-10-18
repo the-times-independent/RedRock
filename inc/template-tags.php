@@ -35,7 +35,7 @@ function redrock_the_subtitle($before, $after) {
     
     $xpath = new DOMXPath($document);
     
-    $subheadQuery = $xpath->query("/html/body/*[position()=1 and self::h2]");
+    $subheadQuery = $xpath->query(RR_SUBHEAD_QUERY_STRING);
     
     if ($subheadQuery->length == 0) {
         return;

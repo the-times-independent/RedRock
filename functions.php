@@ -80,13 +80,6 @@ function redrock_html_js_class () {
 }
 add_action('wp_head', 'redrock_html_js_class', 1);
 
-require get_template_directory() . '/inc/template-tags.php';
-require get_template_directory() . '/inc/extras.php';
-require get_template_directory() . '/inc/customizer.php';
-require get_template_directory() . '/inc/jetpack.php';
-require get_template_directory() . '/inc/plugin-enhancements.php';
-require get_template_directory() . '/inc/single-post-filters.php';
-require get_template_directory() . '/inc/meta-defaults.php';
-require get_template_directory() . '/inc/open-graph.php';
-require get_template_directory() . "/inc/share-image-default.php";
-require get_template_directory() . '/inc/admin-tweaks.php';
+foreach (glob(get_template_directory() . "/inc/*.php") as $filename) {
+    require_once $filename;
+}
