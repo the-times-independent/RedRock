@@ -17,17 +17,36 @@
                 <h1 class="page-title">That page cannot be found.</h1>
             </header>
             <div class="page-content">
-                <p>The page you want has moved or does not exist. You might find what you want if you do a search.</p>
+                <p>
+                    The page you want has moved or does not exist. Doing a search might help to find it.
+                </p>
 <?php
                 if (isset($_GET["id"])) {
                     $searchPrefill = $_GET["id"];
                 }
                 else {
-                    $searchPrefill = basename(strtok($_SERVER["REQUEST_URI"], "?"));
+                    $searchPrefill = basename(
+                        strtok(
+                            $_SERVER["REQUEST_URI"],
+                            "?"
+                        )
+                    );
                 }
-                $searchPrefill = preg_replace('/^\d+-/', '', $searchPrefill);
-                $searchPrefill = preg_replace('/^article-/', '', $searchPrefill);
-                $searchPrefill = preg_replace('/[^a-zA-Z0-9]+/', ' ', $searchPrefill);
+                $searchPrefill = preg_replace(
+                    '/^\d+-/',
+                    '',
+                    $searchPrefill
+                );
+                $searchPrefill = preg_replace(
+                    '/^article-/',
+                    '',
+                    $searchPrefill
+                );
+                $searchPrefill = preg_replace(
+                    '/[^a-zA-Z0-9]+/',
+                    ' ',
+                    $searchPrefill
+                );
                 $searchPrefill = trim($searchPrefill);
                 include(locate_template('searchform.php', false, false));
 ?>

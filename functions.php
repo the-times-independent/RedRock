@@ -13,8 +13,15 @@ function redrock_setup() {
 	));
 	
 	add_theme_support('post-thumbnails');
-	set_post_thumbnail_size(720, 1200);
-	add_image_size('redrock-archive', 560, 9999);
+	set_post_thumbnail_size(
+        720,
+        1200
+    );
+	add_image_size(
+        'redrock-archive',
+        560,
+        9999
+    );
 	
 	register_nav_menus(array(
 		'header' => "Header Menu",
@@ -36,35 +43,82 @@ function redrock_setup() {
 		'audio'
     ));
 }
-add_action('after_setup_theme', 'redrock_setup');
+add_action(
+    'after_setup_theme',
+    'redrock_setup'
+);
 
 function redrock_content_width() {
 	$GLOBALS['content_width'] = apply_filters('redrock_content_width', 1140);
 }
-add_action('after_setup_theme', 'redrock_content_width', 0);
+add_action(
+    'after_setup_theme',
+    'redrock_content_width',
+    0
+);
 
 function redrock_fonts_url() {
 	return "https://use.typekit.net/fdd8eid.css";
 }
 
 function redrock_styles() {
-	wp_enqueue_style('redrock-fonts', redrock_fonts_url(), array(), null);
-	wp_enqueue_style('font-awesome', get_template_directory_uri() . '/font-awesome/font-awesome.css', array(), '20151022');
+	wp_enqueue_style(
+        'redrock-fonts',
+        redrock_fonts_url(),
+        array(),
+        null
+    );
+	wp_enqueue_style(
+        'font-awesome',
+        get_template_directory_uri() . '/font-awesome/font-awesome.css',
+        array(),
+        '20151022'
+    );
 	
 	if (defined('WP_DEBUG') && true === WP_DEBUG) {
-	    wp_enqueue_style('redrock-style', get_stylesheet_uri(), array(), time());
+	    wp_enqueue_style(
+            'redrock-style',
+            get_stylesheet_uri(),
+            array(),
+            time()
+        );
 	}
 	else {
-	    wp_enqueue_style('redrock-style', get_stylesheet_uri());
+	    wp_enqueue_style(
+            'redrock-style',
+            get_stylesheet_uri()
+        );
 	}
 }
 
 function redrock_scripts() {
-	wp_enqueue_script('redrock-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151112', true);
-	wp_enqueue_script('redrock-theme-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery', 'masonry'), '20151130', true);
-	wp_enqueue_script('redrock-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151112', true);
+	wp_enqueue_script(
+        'redrock-navigation',
+        get_template_directory_uri() . '/js/navigation.js',
+        array(),
+        '20151112',
+        true
+    );
+	wp_enqueue_script(
+        'redrock-theme-scripts',
+        get_template_directory_uri() . '/js/scripts.js',
+        array('jquery', 'masonry'),
+        '20151130',
+        true
+    );
+	wp_enqueue_script(
+        'redrock-skip-link-focus-fix',
+        get_template_directory_uri() . '/js/skip-link-focus-fix.js',
+        array(),
+        '20151112',
+        true
+    );
     
-	if (is_singular() && comments_open() && get_option('thread_comments')) {
+	if (
+        is_singular()
+        && comments_open()
+        && get_option('thread_comments')
+    ) {
 		wp_enqueue_script('comment-reply');
 	}
 }
@@ -73,12 +127,19 @@ function redrock_styles_and_scripts() {
     redrock_styles();
     redrock_scripts();
 }
-add_action('wp_enqueue_scripts', 'redrock_styles_and_scripts');
+add_action(
+    'wp_enqueue_scripts',
+    'redrock_styles_and_scripts'
+);
 
 function redrock_html_js_class () {
 	echo "<script>document.documentElement.className = document.documentElement.className.replace('no-js','js');</script>" . "\n";
 }
-add_action('wp_head', 'redrock_html_js_class', 1);
+add_action(
+    'wp_head',
+    'redrock_html_js_class',
+    1
+);
 
 foreach (glob(get_template_directory() . "/inc/*.php") as $filename) {
     require_once $filename;
