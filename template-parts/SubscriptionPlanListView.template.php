@@ -38,11 +38,11 @@ namespace RedRock;
     <div class="offer-details">
         <h2>Unlimited online access</h2>
         <ul>
-            <li>Unlock full access to every article from any device.</li>
+            <li>Read unlimited articles from any device.</li>
         </ul>
-        <h2>Digital product previews</h2>
+        <h2>Early access</h2>
         <ul>
-            <li>Get early access to new media releases, including apps, newsletters, podcasts and more.</li>
+            <li>Get previews of new media releases, including apps, newsletters, podcasts and more.</li>
         </ul>
         <div class="price-details">
             <a class="button" ref="<?php  ?>">Proceed to checkout</a>
@@ -58,12 +58,16 @@ namespace RedRock;
 <div id="auxillary-offers">
     <div id="print-offer">
         <h1>Print-only subscriptions</h1>
-        <p>Don't care for digital access? Get the Print Edition delivered to you weekly.</p>
+        <p>
+            Don't care for digital access? Get the Print Edition delivered to you weekly.
+        </p>
         <a class="button" href="<?php  ?>">Contact us</a>
     </div>
     <div id="gift-offer">
         <h1>Gift a subscription</h1>
-        <p>Support Moab's oldest, most historied journalism institution. Give the gift of a subscription to The Times-Independent.</p>
+        <p>
+            Support Moab's oldest, most historied journalism institution. Give the gift of a subscription to The Times-Independent.
+        </p>
         <a class="button" href="<?php  ?>">See gift offers</a>
     </div>
     <div id="offer-for-current-subscribers">
